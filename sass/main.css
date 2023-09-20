@@ -21,7 +21,7 @@ html {
 body {
   max-width: 390px;
   max-height: 844px;
-  background: linear-gradient(90deg, #4B4F2A 7.29%, #A7B723 100%);
+  background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -170,18 +170,19 @@ header #header {
   position: relative;
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(90deg, #4B4F2A 7.29%, #A7B723 100%);
 }
 header #header i {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 10px 0 0 10px;
-  width: 48px;
-  height: 48px;
+  padding: 33px 0 0 10px;
   cursor: pointer;
   color: #fff;
+  transition: all 0.3s ease;
+}
+header #header i:hover {
+  transform: scale(1.1);
+  color: #E0E0E0;
 }
 header #header #name {
   position: relative;
@@ -220,6 +221,14 @@ header #header #pokeball {
   padding: 15px 10px 0 0;
   cursor: pointer;
 }
+header #header #pokeball svg {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+header #header #pokeball svg:hover {
+  transform: rotate(360deg);
+  fill: #E0E0E0;
+}
 header #visualSection {
   position: relative;
   display: flex;
@@ -231,12 +240,12 @@ header #visualSection #nameJpn {
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-family: Poppins;
-  font-size: 30px;
+  font-size: 35px;
   font-style: normal;
   font-weight: 300;
   line-height: 20px;
-  color: rgba(184, 184, 184, 0.4);
-  padding: 21px 0 0 31px;
+  color: rgba(255, 255, 255, 0.517);
+  padding: 18px 0 0 31px;
 }
 header #visualSection #imagePokemon {
   position: absolute;
@@ -247,14 +256,25 @@ header #visualSection #imagePokemon #svg {
           clip-path: none;
   top: -41px;
   left: 45px;
+  animation: rotate 5s infinite linear;
+  fill: #E0E0E0;
+  fill-opacity: 0.4;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 header #visualSection #imagePokemon img {
   position: absolute;
-  width: 280px;
-  height: 280px;
+  width: 250px;
+  height: 250px;
   z-index: 1;
-  top: -48px;
-  left: 61px;
+  top: -29px;
+  left: 74px;
 }
 header #visualSection #shinyType {
   position: absolute;
@@ -275,11 +295,11 @@ header #visualSection #shinyType #imageShiny {
   height: 90px;
   border-radius: 50%;
   border: 3px solid #fff;
+  background-color: rgba(221, 214, 214, 0.846);
 }
 header #visualSection #shinyType #imageShiny img {
   position: relative;
-  width: 10;
-  height: 70;
+  width: 110%;
   padding: 4px 10px 16px 10px;
 }
 header #visualSection #shinyType #typePokemon {
@@ -305,4 +325,70 @@ header #visualSection #shinyType #typePokemon #nameType2 {
   font-family: "Poppins";
   line-height: 12px;
   margin-bottom: 7px;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px 30px 0 0;
+  height: 527px;
+  margin-top: 25px;
+  box-shadow: 0px -7px 10px 10px rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+main #mainSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #mainSection #genreSection {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  top: 6px;
+  right: 291px;
+}
+main #mainSection #descSection {
+  position: relative;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+}
+main #mainSection #descSection p {
+  position: relative;
+  font-size: 12px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 16px;
+  text-align: center;
+  padding: 4px 15px;
+}
+main #mainSection #megaSection {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  top: 7px;
+  left: 282px;
+}
+main #mainSection #megaSection img {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+main #mainSection #megaSection p {
+  position: relative;
+  font-size: 10px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 16px;
 }/*# sourceMappingURL=main.css.map */

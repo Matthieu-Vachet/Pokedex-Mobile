@@ -7,18 +7,20 @@ header {
                 position: relative;
                 display: flex;
                 justify-content: space-between;
-                background: $bug-gradient;
 
                 & i {
                         position: relative;
                         display: flex;
                         justify-content: center;
-                        align-items: center;
-                        padding: 10px 0 0 10px;
-                        width: 48px;
-                        height: 48px;
+                        padding: 33px 0 0 10px;
                         cursor: pointer;
                         color: $white;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                                transform: scale(1.1);
+                                color: $light-gray;
+                        }
                 }
 
                 & #name {
@@ -52,6 +54,16 @@ header {
                         color: $white-gray;
                         padding: 15px 10px 0 0;
                         cursor: pointer;
+
+                        & svg {
+                                position: relative;
+                                transition: all 0.5s ease-in-out;
+
+                                &:hover {
+                                        transform: rotate(360deg);
+                                        fill: $light-gray;
+                                }
+                        }
                 }
         }
 
@@ -66,12 +78,12 @@ header {
                         writing-mode: vertical-rl;
                         text-orientation: upright;
                         font-family: Poppins;
-                        font-size: 30px;
+                        font-size: 35px;
                         font-style: normal;
                         font-weight: 300;
                         line-height: 20px;
-                        color: #b8b8b866;
-                        padding: 21px 0 0 31px;
+                        color: rgba(255, 255, 255, 0.517);
+                        padding: 18px 0 0 31px;
                 }
 
                 & #imagePokemon {
@@ -82,15 +94,27 @@ header {
                                 clip-path: none;
                                 top: -41px;
                                 left: 45px;
+                                animation: rotate 5s infinite linear;
+                                fill: $light-gray;
+                                fill-opacity: 0.4;
+                        }
+
+                        @keyframes rotate {
+                                0% {
+                                        transform: rotate(0deg);
+                                }
+                                100% {
+                                        transform: rotate(360deg);
+                                }
                         }
 
                         & img {
                                 position: absolute;
-                                width: 280px;
-                                height: 280px;
+                                width: 250px;
+                                height: 250px;
                                 z-index: 1;
-                                top: -48px;
-                                left: 61px;
+                                top: -29px;
+                                left: 74px;
                         }
                 }
 
@@ -113,11 +137,11 @@ header {
                                 height: 90px;
                                 border-radius: 50%;
                                 border: 3px solid $white;
+                                background-color: rgba(221, 214, 214, 0.846);
 
                                 & img {
                                         position: relative;
-                                        width: 10;
-                                        height: 70;
+                                        width: 110%;
                                         padding: 4px 10px 16px 10px;
                                 }
                         }
