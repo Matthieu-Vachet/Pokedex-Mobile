@@ -1,3 +1,149 @@
 // -----------------------------------------------------------------------------
 // Ce fichier contient tous les styles liés à l'en-tête du site/de l'application.
 // -----------------------------------------------------------------------------
+
+header {
+        #header {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                background: $bug-gradient;
+
+                & i {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px 0 0 10px;
+                        width: 48px;
+                        height: 48px;
+                        cursor: pointer;
+                        color: $white;
+                }
+
+                & #name {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 33px 0 0 0;
+
+                        & h1 {
+                                position: relative;
+                                @include fontPoppins700(30px, $white-gray);
+                                line-height: 32px;
+                        }
+
+                        & p {
+                                position: relative;
+                                @include fontPoppins400(20px, $white-gray);
+                                line-height: 16px;
+                                padding-top: 3px;
+                        }
+                }
+
+                & #pokeball {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 48px;
+                        height: 48px;
+                        color: $white-gray;
+                        padding: 15px 10px 0 0;
+                        cursor: pointer;
+                }
+        }
+
+        #visualSection {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+
+                & #nameJpn {
+                        position: relative;
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                        font-family: Poppins;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 20px;
+                        color: #b8b8b866;
+                        padding: 21px 0 0 31px;
+                }
+
+                & #imagePokemon {
+                        position: absolute;
+
+                        & #svg {
+                                position: absolute;
+                                clip-path: none;
+                                top: -41px;
+                                left: 45px;
+                        }
+
+                        & img {
+                                position: absolute;
+                                width: 280px;
+                                height: 280px;
+                                z-index: 1;
+                                top: -48px;
+                                left: 61px;
+                        }
+                }
+
+                & #shinyType {
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        margin: 15px 8px 0 0;
+                        top: -33px;
+                        right: -1px;
+
+                        & #imageShiny {
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 90px;
+                                height: 90px;
+                                border-radius: 50%;
+                                border: 3px solid $white;
+
+                                & img {
+                                        position: relative;
+                                        width: 10;
+                                        height: 70;
+                                        padding: 4px 10px 16px 10px;
+                                }
+                        }
+
+                        & #typePokemon {
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 31px 5px 0 0;
+
+                                & #type1,
+                                #type2 {
+                                        width: 38px;
+                                        padding-bottom: 4px;
+                                }
+
+                                & #nameType1,
+                                #nameType2 {
+                                        position: relative;
+                                        @include fontPoppins400(8px, $white);
+                                        line-height: 12px;
+                                        margin-bottom: 7px;
+                                }
+                        }
+                }
+        }
+}

@@ -1,145 +1,29 @@
-@mixin fontPoppinsBold30(
-  $size: 30px,
+@mixin fontPoppins700(
+  $size,
   $color,
   $weight: 700,
   $style: normal,
   $family: "Poppins",
-  $height: 32
 ) {
   font-size: $size;
   color: $color;
   font-weight: $weight;
   font-style: $style;
   font-family: $family;
-  line-height: $height;
-}
-
-@mixin fontPoppinsBold25(
-  $size: 25px,
-  $color,
-  $weight: 700,
-  $style: normal,
-  $family: "Poppins",
-  $height: 32
-) {
-  font-size: $size;
-  color: $color;
-  font-weight: $weight;
-  font-style: $style;
-  font-family: $family;
-  line-height: $height;
-}
-
-@mixin fontPoppinsBold14(
-  $size: 14px,
-  $color,
-  $weight: 700,
-  $style: normal,
-  $family: "Poppins",
-  $height: 16
-) {
-  font-size: $size;
-  color: $color;
-  font-weight: $weight;
-  font-style: $style;
-  font-family: $family;
-  line-height: $height;
-}
-
-@mixin fontPoppinsBold12(
-  $size: 12px,
-  $color,
-  $weight: 700,
-  $style: normal,
-  $family: "Poppins",
-  $height: 16
-) {
-  font-size: $size;
-  color: $color;
-  font-weight: $weight;
-  font-style: $style;
-  font-family: $family;
-  line-height: $height;
-}
-
-@mixin fontPoppinsBold10(
-  $size: 10px,
-  $color,
-  $weight: 700,
-  $style: normal,
-  $family: "Poppins",
-  $height: 16
-) {
-  font-size: $size;
-  color: $color;
-  font-weight: $weight;
-  font-style: $style;
-  font-family: $family;
-  line-height: $height;
 }
 
 // Régular
 
-@mixin fontPoppinsRegular14(
-  $size: 20px,
+@mixin fontPoppins400(
+  $size,
   $color,
   $weight: 400,
   $style: normal,
   $family: "Poppins",
-  $height: 16
 ) {
   font-size: $size;
   color: $color;
   font-weight: $weight;
   font-style: $style;
   font-family: $family;
-  line-height: $height;
-}
-
-@mixin fontPoppinsRegular12(
-  $size: 12px,
-  $color,
-  $weight: 400,
-  $style: normal,
-  $family: "Poppins",
-  $height: 16
-) {
-  font-size: $size;
-  color: $color;
-  font-weight: $weight;
-  font-style: $style;
-  font-family: $family;
-  line-height: $height;
-}
-
-@mixin fontPoppinsRegular10(
-  $size: 10px,
-  $color,
-  $weight: 400,
-  $style: normal,
-  $family: "Poppins",
-  $height: 16
-) {
-  font-size: $size;
-  color: $color;
-  font-weight: $weight;
-  font-style: $style;
-  font-family: $family;
-  line-height: $height;
-}
-
-@mixin fontPoppinsRegular8(
-  $size: 8px,
-  $color,
-  $weight: 400,
-  $style: normal,
-  $family: "Poppins",
-  $height: 12
-) {
-  font-size: $size;
-  color: $color;
-  font-weight: $weight;
-  font-style: $style;
-  font-family: $family;
-  line-height: $height;
 }
