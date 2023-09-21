@@ -571,7 +571,7 @@ main #statsSection {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 10px 50px 50px;
+  margin: 10px 50px 13px 50px;
 }
 main #statsSection #statsRight {
   position: relative;
@@ -663,10 +663,9 @@ main #statsSection #statsLeft #valueStatsLeft {
 }
 main #generationInfos {
   position: absolute;
+  display: flex;
   bottom: 20%;
   left: 109%;
-  margin: 0;
-  padding: 0;
 }
 main #generationInfos #generationText {
   font-size: 15px;
@@ -681,4 +680,73 @@ main #generationInfos #generationText {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+main #resistanceSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+main #resistanceSection #resistanceTitle {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+main #resistanceSection #resistanceTitle h2 {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 16px;
+}
+main #resistanceSection #resistanceLogo {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+main #resistanceSection #resistanceLogo div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #resistanceSection #resistanceLogo div img {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+main #resistanceSection #resistanceLogo div p {
+  position: relative;
+  width: auto;
+  font-size: 10px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 16px;
+}
+main #resistanceSection #resistanceTuto {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  gap: 7px;
+  margin-top: 9px;
+}
+main #resistanceSection #resistanceTuto p {
+  position: relative;
+  font-size: 8px;
+  color: #666666;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 12px;
 }/*# sourceMappingURL=main.css.map */

@@ -190,7 +190,7 @@ main {
         & #statsSection {
                 position: relative;
                 @include flex-row-center-center;
-                margin: 10px 50px 50px;
+                margin: 10px 50px 13px 50px;
 
                 & #statsRight {
                         position: relative;
@@ -265,12 +265,11 @@ main {
 
         & #generationInfos {
                 position: absolute;
+                display: flex;
                 bottom: 20%;
                 left: 109%;
-                margin: 0;
-                padding: 0;
 
-                #generationText {
+                & #generationText {
                         @include fontPoppins300(15px, $black);
                         writing-mode: vertical-rl;
                         text-orientation: upright;
@@ -279,6 +278,77 @@ main {
                         background-clip: text;
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
+                }
+
+                
+        }
+        & #resistanceSection {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                & #resistanceTitle {
+                        position: relative;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: uppercase;
+                        margin-bottom: 11px;
+
+                        & h2 {
+                                @include fontPoppins700(14px, $medium-gray);
+                                line-height: 16px;
+                        }
+                }
+
+                & #resistanceLogo {
+                        position: relative;
+                        width: 100%;
+                        display: flex;
+
+
+                        & div {
+                                position: relative;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+
+                                & img {
+                                        position: relative;
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 5px;
+                                }
+
+                                & p {
+                                        position: relative;
+                                        width: auto;
+                                        @include fontPoppins700(10px, $white-gray);
+                                        line-height: 16px;
+                                }
+                                
+                        }
+
+                        
+                }
+
+                & #resistanceTuto {
+                        position: relative;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: uppercase;
+                        gap: 7px;
+                        margin-top: 9px;
+
+                        & p {
+                                position: relative;
+                                @include fontPoppins400(8px, $medium-gray);
+                                line-height: 12px;
+                        }
                 }
         }
 }
