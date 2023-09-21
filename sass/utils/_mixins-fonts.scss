@@ -12,6 +12,20 @@
   font-family: $family;
 }
 
+@mixin fontPoppins400Italic(
+  $size,
+  $color,
+  $weight: 400,
+  $style: italic,
+  $family: "Poppins",
+) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+  font-family: $family;
+}
+
 // Régular
 
 @mixin fontPoppins400(

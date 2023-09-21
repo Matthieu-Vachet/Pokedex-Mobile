@@ -19,12 +19,8 @@ html {
 }
 
 body {
-  max-width: 390px;
-  max-height: 844px;
+  width: 100vw;
   background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
 }
 
 html,
@@ -190,7 +186,7 @@ header #header #name {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 33px 0 0 0;
+  padding: 33px 0 0 10px;
 }
 header #header #name h1 {
   position: relative;
@@ -249,13 +245,15 @@ header #visualSection #nameJpn {
 }
 header #visualSection #imagePokemon {
   position: absolute;
+  top: -45%;
+  left: -2%;
 }
 header #visualSection #imagePokemon #svg {
   position: absolute;
   -webkit-clip-path: none;
           clip-path: none;
-  top: -41px;
-  left: 45px;
+  top: calc(50% + 40px);
+  left: calc(50% + 45px);
   animation: rotate 5s infinite linear;
   fill: #E0E0E0;
   fill-opacity: 0.4;
@@ -273,8 +271,8 @@ header #visualSection #imagePokemon img {
   width: 250px;
   height: 250px;
   z-index: 1;
-  top: -29px;
-  left: 74px;
+  top: calc(50% + 60px);
+  left: calc(50% + 80px);
 }
 header #visualSection #shinyType {
   position: absolute;
@@ -287,12 +285,14 @@ header #visualSection #shinyType {
   right: -1px;
 }
 header #visualSection #shinyType #imageShiny {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90px;
   height: 90px;
+  top: 0%;
+  right: 0%;
   border-radius: 50%;
   border: 3px solid #fff;
   background-color: rgba(221, 214, 214, 0.846);
@@ -302,21 +302,21 @@ header #visualSection #shinyType #imageShiny img {
   width: 110%;
   padding: 4px 10px 16px 10px;
 }
-header #visualSection #shinyType #typePokemon {
-  position: relative;
+header #visualSection #shinyType #typePokemon1 {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 31px 5px 0 0;
+  top: calc(50% + 180px);
+  right: calc(50% - 0px);
 }
-header #visualSection #shinyType #typePokemon #type1,
-header #visualSection #shinyType #typePokemon #type2 {
+header #visualSection #shinyType #typePokemon1 #type1 {
+  position: relative;
   width: 38px;
-  padding-bottom: 4px;
+  padding-bottom: 1px;
 }
-header #visualSection #shinyType #typePokemon #nameType1,
-header #visualSection #shinyType #typePokemon #nameType2 {
+header #visualSection #shinyType #typePokemon1 #nameType1 {
   position: relative;
   font-size: 8px;
   color: #fff;
@@ -324,7 +324,29 @@ header #visualSection #shinyType #typePokemon #nameType2 {
   font-style: normal;
   font-family: "Poppins";
   line-height: 12px;
-  margin-bottom: 7px;
+}
+header #visualSection #shinyType #typePokemon2 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% + 125px);
+  right: calc(50% + 0px);
+}
+header #visualSection #shinyType #typePokemon2 #type2 {
+  position: relative;
+  width: 38px;
+  padding-bottom: 1px;
+}
+header #visualSection #shinyType #typePokemon2 #nameType2 {
+  position: relative;
+  font-size: 8px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 12px;
 }
 
 main {
@@ -350,7 +372,7 @@ main #mainSection #genreSection {
   align-items: center;
   gap: 4px;
   top: 6px;
-  right: 291px;
+  right: 75%;
 }
 main #mainSection #descSection {
   position: relative;
@@ -376,7 +398,7 @@ main #mainSection #megaSection {
   align-items: center;
   gap: 2px;
   top: 7px;
-  left: 282px;
+  left: 73%;
 }
 main #mainSection #megaSection img {
   position: relative;
@@ -391,4 +413,155 @@ main #mainSection #megaSection p {
   font-style: normal;
   font-family: "Poppins";
   line-height: 16px;
+}
+main #heightWeightSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 27px;
+}
+main #heightWeightSection #height {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  text-transform: uppercase;
+}
+main #heightWeightSection #height h2 {
+  position: relative;
+  font-size: 14px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 16px;
+}
+main #heightWeightSection #height p {
+  position: relative;
+  font-size: 25px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 32px;
+  background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main #heightWeightSection #separator {
+  position: relative;
+  display: flex;
+  height: 56px;
+  width: 3px;
+  background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
+}
+main #heightWeightSection #weight {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  text-transform: uppercase;
+}
+main #heightWeightSection #weight h2 {
+  position: relative;
+  font-size: 14px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 16px;
+}
+main #heightWeightSection #weight p {
+  position: relative;
+  font-size: 25px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 32px;
+  background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main #capacitéSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  gap: 7px;
+}
+main #capacitéSection #capacité1, main #capacitéSection #capacité2, main #capacitéSection #capacité3 {
+  display: flex;
+  align-items: center;
+}
+main #capacitéSection #capacité1 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 244px;
+  height: 34px;
+  border-radius: 10px 20px;
+  background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
+  margin-right: 15%;
+  padding: 0 20px;
+}
+main #capacitéSection #capacité2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 244px;
+  height: 34px;
+  border-radius: 10px 20px;
+  background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
+  margin-left: 15%;
+  padding: 0 20px;
+}
+main #capacitéSection #capacité3 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 244px;
+  height: 34px;
+  border-radius: 10px 20px;
+  background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
+  margin-right: 15%;
+  padding: 0 20px;
+  gap: 10px;
+}
+main #capacitéSection #capacité3 #capacitéSecret {
+  position: relative;
+  display: flex;
+  gap: 5px;
+}
+main #capacitéSection #capacité3 #capacitéSecret i {
+  position: relative;
+  color: #FFFFFF;
+}
+main #capacitéSection #capacitéTitle {
+  position: relative;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Poppins";
+  line-height: 16px;
+}
+main #capacitéSection p {
+  position: relative;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
 }/*# sourceMappingURL=main.css.map */

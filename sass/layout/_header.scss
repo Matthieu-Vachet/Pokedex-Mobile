@@ -29,7 +29,7 @@ header {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        padding: 33px 0 0 0;
+                        padding: 33px 0 0 10px;
 
                         & h1 {
                                 position: relative;
@@ -88,12 +88,14 @@ header {
 
                 & #imagePokemon {
                         position: absolute;
+                        top: -45%;
+                        left:-2%;
 
                         & #svg {
                                 position: absolute;
                                 clip-path: none;
-                                top: -41px;
-                                left: 45px;
+                                top: calc(50% + 40px);
+                                left: calc(50% + 45px);
                                 animation: rotate 5s infinite linear;
                                 fill: $light-gray;
                                 fill-opacity: 0.4;
@@ -113,8 +115,8 @@ header {
                                 width: 250px;
                                 height: 250px;
                                 z-index: 1;
-                                top: -29px;
-                                left: 74px;
+                                top: calc(50% + 60px);
+                                left: calc(50% + 80px);
                         }
                 }
 
@@ -129,12 +131,14 @@ header {
                         right: -1px;
 
                         & #imageShiny {
-                                position: relative;
+                                position: absolute;
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 width: 90px;
                                 height: 90px;
+                                top: 0%;
+                                right: 0%;
                                 border-radius: 50%;
                                 border: 3px solid $white;
                                 background-color: rgba(221, 214, 214, 0.846);
@@ -146,26 +150,48 @@ header {
                                 }
                         }
 
-                        & #typePokemon {
-                                position: relative;
+                        & #typePokemon1 {
+                                position: absolute;
                                 display: flex;
                                 flex-direction: column;
                                 justify-content: center;
                                 align-items: center;
-                                padding: 31px 5px 0 0;
+                                top: calc(50% + 180px);
+                                right: calc(50% - 0px);
 
-                                & #type1,
-                                #type2 {
+                                & #type1 {
+                                        position: relative;
                                         width: 38px;
-                                        padding-bottom: 4px;
+                                        padding-bottom: 1px;
                                 }
 
-                                & #nameType1,
-                                #nameType2 {
+                                & #nameType1 {
                                         position: relative;
                                         @include fontPoppins400(8px, $white);
                                         line-height: 12px;
-                                        margin-bottom: 7px;
+                                }
+                        }
+
+                        & #typePokemon2 {
+                                position: absolute;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                top: calc(50% + 125px);
+                                right: calc(50% + 0px);
+
+                                & #type2 {
+                                        position: relative;
+                                        width: 38px;
+                                        padding-bottom: 1px;
+                                }
+
+                                & #nameType2 {
+                                        position: relative;
+                                        @include fontPoppins400(8px, $white);
+                                        line-height: 12px;
+                                        
                                 }
                         }
                 }

@@ -21,7 +21,7 @@ main {
                         align-items: center;
                         gap: 4px;
                         top: 6px;
-                        right: 291px;
+                        right: 75%;
                 }
 
                 & #descSection {
@@ -46,7 +46,7 @@ main {
                         align-items: center;
                         gap: 2px;
                         top: 7px;
-                        left: 282px;
+                        left: 73%;
 
                         & img {
                                 position: relative;
@@ -61,5 +61,154 @@ main {
                         }
                 }
         }
-}
+        & #heightWeightSection {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 27px;
 
+                & #height {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 35%;
+                        text-transform: uppercase;
+
+                        & h2 {
+                                position: relative;
+                                @include fontPoppins700(14px, $medium-gray);
+                                line-height: 16px;
+                        }
+
+                        & p {
+                                position: relative;
+                                @include fontPoppins700(25px, $medium-gray);
+                                line-height: 32px;
+                                background: $water-gradient;
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                        }
+                }
+
+                & #separator {
+                        position: relative;
+                        display: flex;
+                        height: 56px;
+                        width: 3px;
+                        background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
+                }
+
+                & #weight {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 35%;
+                        text-transform: uppercase;
+
+                        & h2 {
+                                position: relative;
+                                @include fontPoppins700(14px, $medium-gray);
+                                line-height: 16px;
+                        }
+
+                        & p {
+                                position: relative;
+                                @include fontPoppins700(25px, $medium-gray);
+                                line-height: 32px;
+                                background: $water-gradient;
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                        }
+                }
+        }
+
+        & #capacitéSection {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10px;
+                gap: 7px;
+
+                & #capacité1,
+                & #capacité2,
+                & #capacité3 {
+                        display: flex;
+                        align-items: center;
+                }
+
+                & #capacité1 {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 244px;
+                        height: 34px;
+                        border-radius: 10px 20px;
+                        background: $water-gradient;
+                        margin-right: 15%;
+                        padding: 0 20px;
+                        
+                }
+
+                & #capacité2 {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 244px;
+                        height: 34px;
+                        border-radius: 10px 20px;
+                        background: $water-gradient;
+                        margin-left: 15%;
+                        padding: 0 20px;
+                }
+
+                & #capacité3 {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 244px;
+                        height: 34px;
+                        border-radius: 10px 20px;
+                        background: $water-gradient;
+                        margin-right: 15%;
+                        padding: 0 20px;
+                        gap: 10px;
+
+
+                        & #capacitéSecret {
+                                position: relative;
+                                display: flex;
+                                gap: 5px;
+
+                                & i {
+                                        position: relative;
+                                        color: $white-gray;
+                                }
+
+                        }
+                }
+
+                & #capacitéTitle {
+                        position: relative;
+                        width: auto;
+                        height: auto;
+                        @include fontPoppins400Italic(20px, $white-gray);
+                        line-height: 16px;
+                }
+
+                & p {
+                        position: relative;
+                        @include fontPoppins700(20px, $white-gray);
+                }
+        }
+
+        
+}
