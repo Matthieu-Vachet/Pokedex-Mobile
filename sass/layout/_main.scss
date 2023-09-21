@@ -262,4 +262,23 @@ main {
                         }
                 }
         }
+
+        & #generationInfos {
+                position: absolute;
+                bottom: 20%;
+                left: 109%;
+                margin: 0;
+                padding: 0;
+
+                #generationText {
+                        @include fontPoppins300(15px, $black);
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                        text-transform: uppercase;
+                        background: $water-gradient;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                }
+        }
 }

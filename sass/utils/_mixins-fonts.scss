@@ -26,12 +26,26 @@
   font-family: $family;
 }
 
-// Régular
+
 
 @mixin fontPoppins400(
   $size,
   $color,
   $weight: 400,
+  $style: normal,
+  $family: "Poppins",
+) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+  font-family: $family;
+}
+
+@mixin fontPoppins300(
+  $size,
+  $color,
+  $weight: 300,
   $style: normal,
   $family: "Poppins",
 ) {
