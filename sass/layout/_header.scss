@@ -5,13 +5,11 @@
 header {
         #header {
                 position: relative;
-                display: flex;
-                justify-content: space-between;
+                @include flex-between;
 
                 & i {
                         position: relative;
-                        display: flex;
-                        justify-content: center;
+                        @include flex-center;
                         padding: 33px 0 0 10px;
                         cursor: pointer;
                         color: $white;
@@ -25,10 +23,7 @@ header {
 
                 & #name {
                         position: relative;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
+                        @include flex-column-center-center;
                         padding: 33px 0 0 10px;
 
                         & h1 {
@@ -46,9 +41,7 @@ header {
                 }
 
                 & #pokeball {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        @include flex-center-center;
                         width: 48px;
                         height: 48px;
                         color: $white-gray;
@@ -69,9 +62,7 @@ header {
 
         #visualSection {
                 position: relative;
-                display: flex;
-                justify-content: space-between;
-                flex-direction: row;
+                @include flex-between-row;
 
                 & #nameJpn {
                         position: relative;
@@ -122,19 +113,14 @@ header {
 
                 & #shinyType {
                         position: absolute;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-end;
-                        align-items: flex-end;
+                        @include flex-column-flexend-flexend;
                         margin: 15px 8px 0 0;
                         top: -33px;
                         right: -1px;
 
                         & #imageShiny {
                                 position: absolute;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+                                @include flex-center-center;
                                 width: 90px;
                                 height: 90px;
                                 top: 0%;
@@ -152,10 +138,7 @@ header {
 
                         & #typePokemon1 {
                                 position: absolute;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
+                                @include flex-column-center-center;
                                 top: calc(50% + 180px);
                                 right: calc(50% - 0px);
 
@@ -174,10 +157,7 @@ header {
 
                         & #typePokemon2 {
                                 position: absolute;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
+                                @include flex-column-center-center;
                                 top: calc(50% + 125px);
                                 right: calc(50% + 0px);
 

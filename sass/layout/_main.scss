@@ -1,7 +1,6 @@
 main {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         background: rgba(255, 255, 255, 0.5);
         border-radius: 30px 30px 0 0;
         height: 527px;
@@ -11,14 +10,11 @@ main {
 
         & #mainSection {
                 position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-center-center;
 
                 & #genreSection {
                         position: absolute;
-                        display: flex;
-                        align-items: center;
+                        @include flex-aligncenter;
                         gap: 4px;
                         top: 6px;
                         right: 75%;
@@ -42,8 +38,7 @@ main {
 
                 & #megaSection {
                         position: absolute;
-                        display: flex;
-                        align-items: center;
+                        @include flex-aligncenter;
                         gap: 2px;
                         top: 7px;
                         left: 73%;
@@ -63,17 +58,12 @@ main {
         }
         & #heightWeightSection {
                 position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex-center-center;
                 padding-top: 27px;
 
                 & #height {
                         position: relative;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
+                        @include flex-column-center-center;
                         width: 35%;
                         text-transform: uppercase;
 
@@ -94,20 +84,9 @@ main {
                         }
                 }
 
-                & #separator {
-                        position: relative;
-                        display: flex;
-                        height: 56px;
-                        width: 3px;
-                        background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
-                }
-
                 & #weight {
                         position: relative;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
+                        @include flex-column-center-center;
                         width: 35%;
                         text-transform: uppercase;
 
@@ -131,37 +110,30 @@ main {
 
         & #capacitéSection {
                 position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                @include flex-column-center-center;
                 padding-top: 10px;
                 gap: 7px;
 
                 & #capacité1,
                 & #capacité2,
                 & #capacité3 {
-                        display: flex;
-                        align-items: center;
+                        @include flex-aligncenter;
                 }
 
                 & #capacité1 {
                         position: relative;
-                        display: flex;
-                        justify-content: space-between;
+                        @include flex-between;
                         width: 244px;
                         height: 34px;
                         border-radius: 10px 20px;
                         background: $water-gradient;
                         margin-right: 15%;
                         padding: 0 20px;
-                        
                 }
 
                 & #capacité2 {
                         position: relative;
-                        display: flex;
-                        justify-content: space-between;
+                        @include flex-between;
                         width: 244px;
                         height: 34px;
                         border-radius: 10px 20px;
@@ -172,8 +144,7 @@ main {
 
                 & #capacité3 {
                         position: relative;
-                        display: flex;
-                        justify-content: space-between;
+                        @include flex-between;
                         width: 244px;
                         height: 34px;
                         border-radius: 10px 20px;
@@ -181,7 +152,6 @@ main {
                         margin-right: 15%;
                         padding: 0 20px;
                         gap: 10px;
-
 
                         & #capacitéSecret {
                                 position: relative;
@@ -192,7 +162,6 @@ main {
                                         position: relative;
                                         color: $white-gray;
                                 }
-
                         }
                 }
 
@@ -210,5 +179,87 @@ main {
                 }
         }
 
-        
+        & #separator {
+                position: relative;
+                display: flex;
+                height: 56px;
+                width: 3px;
+                background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
+        }
+
+        & #statsSection {
+                position: relative;
+                @include flex-row-center-center;
+                margin: 10px 50px 50px;
+
+                & #statsRight {
+                        position: relative;
+                        @include flex-row;
+                        width: 50%;
+
+                        & #nameStatsRight {
+                                position: relative;
+                                @include flex-column-justify-center;
+                                width: 100%;
+                                text-transform: uppercase;
+                                @include fontPoppins700(10px, $medium-gray);
+                                gap: 22px;
+                        }
+
+                        & #valueStatsRight {
+                                position: relative;
+                                @include flex-column-justify-center;
+                                align-items: flex-end;
+                                width: auto;
+                                text-transform: uppercase;
+                                @include fontPoppins700(25px, $medium-gray);
+                                background: $water-gradient;
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                line-height: 32px;
+                                padding-right: 10px;
+                        }
+                }
+
+                & #separatorStats {
+                        position: relative;
+                        display: flex;
+                        height: 95px;
+                        width: 3px;
+                        background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
+                }
+
+                & #statsLeft {
+                        position: relative;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        width: 50%;
+
+                        & #nameStatsLeft {
+                                position: relative;
+                                @include flex-column-justify-center;
+                                align-items: flex-end;
+                                width: 100%;
+                                text-transform: uppercase;
+                                @include fontPoppins700(10px, $medium-gray);
+                                gap: 22px;
+                        }
+
+                        & #valueStatsLeft {
+                                position: relative;
+                                @include flex-column-justify-center;
+                                align-items: flex-start;
+                                width: auto;
+                                text-transform: uppercase;
+                                @include fontPoppins700(25px, $medium-gray);
+                                background: $water-gradient;
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                line-height: 32px;
+                                padding-left: 10px;
+                        }
+                }
+        }
 }

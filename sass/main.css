@@ -452,13 +452,6 @@ main #heightWeightSection #height p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-main #heightWeightSection #separator {
-  position: relative;
-  display: flex;
-  height: 56px;
-  width: 3px;
-  background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
-}
 main #heightWeightSection #weight {
   position: relative;
   display: flex;
@@ -564,4 +557,107 @@ main #capacitéSection p {
   font-weight: 700;
   font-style: normal;
   font-family: "Poppins";
+}
+main #separator {
+  position: relative;
+  display: flex;
+  height: 56px;
+  width: 3px;
+  background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
+}
+main #statsSection {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 50px 50px;
+}
+main #statsSection #statsRight {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+main #statsSection #statsRight #nameStatsRight {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  gap: 22px;
+}
+main #statsSection #statsRight #valueStatsRight {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 32px;
+  padding-right: 10px;
+}
+main #statsSection #separatorStats {
+  position: relative;
+  display: flex;
+  height: 95px;
+  width: 3px;
+  background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
+}
+main #statsSection #statsLeft {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 50%;
+}
+main #statsSection #statsLeft #nameStatsLeft {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  gap: 22px;
+}
+main #statsSection #statsLeft #valueStatsLeft {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #666666;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Poppins";
+  background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 32px;
+  padding-left: 10px;
 }/*# sourceMappingURL=main.css.map */
