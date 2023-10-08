@@ -10,7 +10,7 @@ header {
                 & i {
                         position: relative;
                         @include flex-center;
-                        padding: 33px 0 0 10px;
+                        padding: 33px 0 0 20px;
                         cursor: pointer;
                         color: $white;
                         transition: all 0.3s ease;
@@ -24,7 +24,7 @@ header {
                 & #name {
                         position: relative;
                         @include flex-column-center-center;
-                        padding: 33px 0 0 10px;
+                        padding: 25px 0 0 10px;
 
                         & h1 {
                                 position: relative;
@@ -74,7 +74,7 @@ header {
                         font-weight: 300;
                         line-height: 20px;
                         color: rgba(255, 255, 255, 0.517);
-                        padding: 18px 0 0 31px;
+                        padding: 20px 0 0 31px;
                 }
 
                 & #imagePokemon {
@@ -84,12 +84,13 @@ header {
 
                         & #svg {
                                 position: absolute;
+                                width: 250px;
                                 clip-path: none;
                                 top: calc(50% + 40px);
-                                left: calc(50% + 45px);
+                                left: calc(50% + 75px);
                                 animation: rotate 5s infinite linear;
                                 fill: $light-gray;
-                                fill-opacity: 0.4;
+                                fill-opacity: 0.1;
                         }
 
                         @keyframes rotate {
@@ -114,20 +115,20 @@ header {
                 & #shinyType {
                         position: absolute;
                         @include flex-column-flexend-flexend;
-                        margin: 15px 8px 0 0;
+                        margin: 15px 15px 0 0;
                         top: -33px;
                         right: -1px;
 
                         & #imageShiny {
                                 position: absolute;
                                 @include flex-center-center;
-                                width: 90px;
-                                height: 90px;
+                                width: 80px;
+                                height: 80px;
                                 top: 0%;
                                 right: 0%;
                                 border-radius: 50%;
                                 border: 3px solid $white;
-                                background-color: rgba(221, 214, 214, 0.846);
+                                background-color: rgba(221, 214, 214, 0.5);
 
                                 & img {
                                         position: relative;
