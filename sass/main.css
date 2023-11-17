@@ -24,7 +24,6 @@ html {
 body {
   width: 100vw;
   max-width: 390px;
-  background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
 }
 
 html,
@@ -234,18 +233,22 @@ header #visualSection {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  height: 200px;
 }
 header #visualSection #nameJpn {
   position: relative;
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-family: Poppins;
-  font-size: 35px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 300;
   line-height: 20px;
   color: rgba(255, 255, 255, 0.517);
   padding: 20px 0 0 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header #visualSection #imagePokemon {
   position: absolute;
@@ -273,11 +276,11 @@ header #visualSection #imagePokemon #svg {
 }
 header #visualSection #imagePokemon img {
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   z-index: 1;
-  top: calc(50% + 60px);
-  left: calc(50% + 80px);
+  top: calc(50% + 100px);
+  left: calc(50% + 110px);
 }
 header #visualSection #shinyType {
   position: absolute;
@@ -306,8 +309,11 @@ header #visualSection #shinyType #imageShiny img {
   position: relative;
   width: 110%;
   padding: 4px 10px 16px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-header #visualSection #shinyType #typePokemon1 {
+header #visualSection #shinyType #typePokemon2 {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -315,6 +321,29 @@ header #visualSection #shinyType #typePokemon1 {
   align-items: center;
   top: calc(50% + 180px);
   right: calc(50% - 0px);
+}
+header #visualSection #shinyType #typePokemon2 #type2 {
+  position: relative;
+  width: 38px;
+  padding-bottom: 1px;
+}
+header #visualSection #shinyType #typePokemon2 #nameType2 {
+  position: relative;
+  font-size: 8px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Poppins";
+  line-height: 12px;
+}
+header #visualSection #shinyType #typePokemon1 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% + 125px);
+  right: calc(50% + 0px);
 }
 header #visualSection #shinyType #typePokemon1 #type1 {
   position: relative;
@@ -331,27 +360,16 @@ header #visualSection #shinyType #typePokemon1 #nameType1 {
   line-height: 12px;
 }
 header #visualSection #shinyType #typePokemon2 {
-  position: absolute;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+header #visualSection #shinyType #typePokemon1 {
   top: calc(50% + 125px);
-  right: calc(50% + 0px);
 }
-header #visualSection #shinyType #typePokemon2 #type2 {
-  position: relative;
-  width: 38px;
-  padding-bottom: 1px;
+header #visualSection #shinyType else #typePokemon2 {
+  display: none;
 }
-header #visualSection #shinyType #typePokemon2 #nameType2 {
-  position: relative;
-  font-size: 8px;
-  color: #fff;
-  font-weight: 400;
-  font-style: normal;
-  font-family: "Poppins";
-  line-height: 12px;
+header #visualSection #shinyType else #typePokemon1 {
+  top: calc(50% + 152.5px);
 }
 
 main {
@@ -360,7 +378,6 @@ main {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 30px 30px 0 0;
-  height: 527px;
   margin-top: 25px;
   box-shadow: 0px -7px 10px 10px rgba(0, 0, 0, 0.15);
   z-index: 0;
@@ -544,7 +561,7 @@ main #capacitéSection #capacité3 #capacitéSecret i {
   position: relative;
   color: #FFFFFF;
 }
-main #capacitéSection #capacitéTitle {
+main #capacitéSection #capacitéTitle1, main #capacitéSection #capacitéTitle2, main #capacitéSection #capacitéTitleSecret {
   position: relative;
   width: auto;
   height: auto;
@@ -743,12 +760,12 @@ main #resistanceSection #resistanceTuto {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  gap: 7px;
+  gap: 6px;
   margin-top: 9px;
 }
 main #resistanceSection #resistanceTuto p {
   position: relative;
-  font-size: 8px;
+  font-size: 7px;
   color: #666666;
   font-weight: 400;
   font-style: normal;

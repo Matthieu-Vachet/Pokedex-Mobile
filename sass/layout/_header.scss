@@ -63,18 +63,20 @@ header {
         #visualSection {
                 position: relative;
                 @include flex-between-row;
+                height: 200px;
 
                 & #nameJpn {
                         position: relative;
                         writing-mode: vertical-rl;
                         text-orientation: upright;
                         font-family: Poppins;
-                        font-size: 35px;
+                        font-size: 30px;
                         font-style: normal;
                         font-weight: 300;
                         line-height: 20px;
                         color: rgba(255, 255, 255, 0.517);
                         padding: 20px 0 0 31px;
+                        @include flex-center-center;
                 }
 
                 & #imagePokemon {
@@ -104,17 +106,22 @@ header {
 
                         & img {
                                 position: absolute;
-                                width: 250px;
-                                height: 250px;
+                                width: 200px;
+                                height: 200px;
                                 z-index: 1;
-                                top: calc(50% + 60px);
-                                left: calc(50% + 80px);
+                                top: calc(50% + 100px);
+                                left: calc(50% + 110px);
                         }
                 }
+                
 
                 & #shinyType {
                         position: absolute;
-                        @include flex-column-flexend-flexend;
+                        // @include flex-column-flexend-flexend;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: flex-end;
                         margin: 15px 15px 0 0;
                         top: -33px;
                         right: -1px;
@@ -134,33 +141,15 @@ header {
                                         position: relative;
                                         width: 110%;
                                         padding: 4px 10px 16px 10px;
-                                }
-                        }
-
-                        & #typePokemon1 {
-                                position: absolute;
-                                @include flex-column-center-center;
-                                top: calc(50% + 180px);
-                                right: calc(50% - 0px);
-
-                                & #type1 {
-                                        position: relative;
-                                        width: 38px;
-                                        padding-bottom: 1px;
-                                }
-
-                                & #nameType1 {
-                                        position: relative;
-                                        @include fontPoppins400(8px, $white);
-                                        line-height: 12px;
+                                        @include flex-center-center;
                                 }
                         }
 
                         & #typePokemon2 {
                                 position: absolute;
                                 @include flex-column-center-center;
-                                top: calc(50% + 125px);
-                                right: calc(50% + 0px);
+                                top: calc(50% + 180px);
+                                right: calc(50% - 0px);
 
                                 & #type2 {
                                         position: relative;
@@ -172,8 +161,46 @@ header {
                                         position: relative;
                                         @include fontPoppins400(8px, $white);
                                         line-height: 12px;
+                                }
+                        }
+
+                        & #typePokemon1 {
+                                position: absolute;
+                                @include flex-column-center-center;
+                                top: calc(50% + 125px);
+                                right: calc(50% + 0px);
+
+                                & #type1 {
+                                        position: relative;
+                                        width: 38px;
+                                        padding-bottom: 1px;
+                                }
+
+                                & #nameType1 {
+                                        position: relative;
+                                        @include fontPoppins400(8px, $white);
+                                        line-height: 12px;
                                         
                                 }
+                        }
+
+                        @if (hasSecondType) {
+                                #typePokemon2 {
+                                    display: flex; // Afficher le deuxième type
+                                }
+                        
+                                #typePokemon1 {
+                                    top: calc(50% + 125px); // Ajuster la position du premier type
+                                }
+                            } else {
+                                #typePokemon2 {
+                                    display: none; // Masquer le deuxième type
+                                }
+                        
+                                #typePokemon1 {
+                                    top: calc(50% + 152.5px); // Ajuster la position du premier type
+                                }
+                        
                         }
                 }
         }

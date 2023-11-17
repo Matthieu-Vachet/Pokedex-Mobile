@@ -3,7 +3,7 @@ main {
         @include flex-column;
         background: rgba(255, 255, 255, 0.5);
         border-radius: 30px 30px 0 0;
-        height: 527px;
+        // height: 527px;
         margin-top: 25px;
         box-shadow: 0px -7px 10px 10px rgba(0, 0, 0, 0.15);
         z-index: 0;
@@ -165,7 +165,9 @@ main {
                         }
                 }
 
-                & #capacitéTitle {
+                & #capacitéTitle1,
+                & #capacitéTitle2,
+                & #capacitéTitleSecret {
                         position: relative;
                         width: auto;
                         height: auto;
@@ -335,12 +337,12 @@ main {
                         align-items: center;
                         justify-content: center;
                         text-transform: uppercase;
-                        gap: 7px;
+                        gap: 6px;
                         margin-top: 9px;
 
                         & p {
                                 position: relative;
-                                @include fontPoppins400(8px, $medium-gray);
+                                @include fontPoppins400(7px, $medium-gray);
                                 line-height: 12px;
                         }
                 }
