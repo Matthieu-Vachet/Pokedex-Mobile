@@ -2,7 +2,7 @@ import fetchApi from "./fetchApi.js";
 import { updateBackground, updatePokemonInfo, updateGenderSection } from "./domManipulation.js";
 import typesBackground from "./typeBackground.js";
 
-export default async function changePokemon() {
+export default async function changePokemon(callback) {
     const data = await fetchApi();
 
     const firstType = data.types[0].name;
@@ -15,4 +15,9 @@ export default async function changePokemon() {
     const sexeFeminin = data.sexe && data.sexe.female;
 
     updateGenderSection(sexeMasculin, sexeFeminin);
+
+    // Appeler le callback si celui-ci est défini
+    if (callback && typeof callback === 'function') {
+        callback();
+    }
 }

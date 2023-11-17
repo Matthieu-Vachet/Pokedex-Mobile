@@ -1,4 +1,4 @@
-import currentPokemonData from "./fetchApi.js";
+
 export function updateBackground(color) {
 
     const capacité1 = document.getElementById("capacité1");
@@ -25,6 +25,7 @@ export function updateBackground(color) {
     evolveSection.style.background = color;
 
 }
+
 
 export function updatePokemonInfo(data) {
     const pkemonName = document.getElementById("Pokemon_name");
@@ -69,13 +70,22 @@ export function updatePokemonInfo(data) {
     const TenebreValue = document.getElementById("tenebreValue");
     const AcierValue = document.getElementById("acierValue");
     const feeValue = document.getElementById("feeValue");
-    const evolveNextImage = document.getElementById("evolveNextImage");
+    const evolveConditionText = document.getElementById("evolveConditionText");
+    const evolveNameText = document.getElementById("evolveNameText");
+    const evolveNameId = document.getElementById("evolveNameId");
+    const MegaSpriteBackground = document.getElementById("MegaSpriteBackground");
+    const GmaxSpriteBackground = document.getElementById("GmaxSpriteBackground");
 
     pkemonName.innerHTML = data.name.fr;
     pokemonId.innerHTML = "#" + data.pokedexId;
     namejpn.innerHTML = data.name.jp;
     imagePokemon.src = data.sprites.regular;
-    imageShiny.src = data.sprites.shiny;
+    if (data.sprites && data.sprites.shiny) {
+        imageShiny.style.display = "block";
+        imageShiny.src = data.sprites.shiny;
+    } else {
+        imageShiny.style.display = "none";
+    }
     imageType1.src = data.types[0].image;
     nameType1.innerHTML = data.types[0].name;
 
@@ -90,13 +100,17 @@ export function updatePokemonInfo(data) {
     descValue.innerHTML = data.category;
     heightValue.innerHTML = data.height;
     weightValue.innerHTML = data.weight;
-    capacitéTitle1.innerHTML = data.talents[0].name;
-    if (data.talents[1]) {
+    if (data.talents && Array.isArray(data.talents) && data.talents.length > 0) {
+        capacitéTitle1.innerHTML = data.talents[0].name;
+    } else {
+        capacitéTitle1.innerHTML = "---";
+    }    
+    if (data.talents && Array.isArray(data.talents) && data.talents.length > 1) {
         capacitéTitle2.innerHTML = data.talents[1].name;
     } else {
         capacitéTitle2.innerHTML = "---";
     }
-    if (data.talents[2]) {
+    if (data.talents && Array.isArray(data.talents) && data.talents.length > 2) {
         capacitéTitleSecret.innerHTML = data.talents[2].name;
     } else {
         capacitéTitleSecret.innerHTML = "---";
@@ -128,41 +142,26 @@ export function updatePokemonInfo(data) {
     AcierValue.innerHTML = data.resistances[16].multiplier;
     feeValue.innerHTML = data.resistances[17].multiplier;
 
-// Assure-toi que la fonction englobante est async
-async function updatePokemonInfo(data) {
-    console.log("Data evolution:", data.evolution);
-    const nextEvolutions = data.evolution && data.evolution.next;
-    console.log("Next evolutions:", nextEvolutions);
+    if (data.evolution && Array.isArray(data.evolution.next) && data.evolution.next.length > 0) {
 
-    if (nextEvolutions && nextEvolutions.length > 0) {
-        const firstEvolution = nextEvolutions[0];
-        console.log("First evolution:", firstEvolution);
-
-        if (firstEvolution && firstEvolution.pokedexId !== null) {
-            // Utilise directement l'ID du Pokémon actuel
-            try {
-                const currentPokemonData = await fetchApi(data.pokedexId);
-                const nextPokemonData = currentPokemonData[firstEvolution.pokedexId];
-                console.log("Next Pokemon data:", nextPokemonData);
-
-                if (nextPokemonData && nextPokemonData.sprites) {
-                    console.log("Next Pokemon sprites:", nextPokemonData.sprites);
-                    // Assure-toi que evolveNextImage est correctement défini
-                    evolveNextImage.src = nextPokemonData.sprites.regular;
-                } else {
-                    evolveNextImage.innerHTML = "Aucune évolution";
-                }
-            } catch (error) {
-                console.error("Erreur lors de la récupération du Pokémon actuel:", error);
-                evolveNextImage.innerHTML = "Aucune évolution";
-            }
-        } else {
-            evolveNextImage.innerHTML = "Aucune évolution";
-        }
+        evolveConditionText.innerHTML = data.evolution.next[0].condition
+        evolveNameText.innerHTML = data.evolution.next[0].name
+        evolveNameId.innerHTML ="#" + data.evolution.next[0].pokedexId
     } else {
-        evolveNextImage.innerHTML = "Aucune évolution";
+        evolveConditionText.innerHTML = "";
+        evolveNameText.innerHTML = "Aucune évolution";
+        evolveNameId.innerHTML = "";
     }
-}
+
+    MegaSpriteBackground.style.display = "none";
+    if (data.evolution && Array.isArray(data.evolution.mega) && data.evolution.mega.length > 0) {
+        MegaSpriteBackground.style.display = "block";
+        MegaSpriteBackground.src = data.evolution.mega[0].sprites.regular;
+    } else {
+        MegaSpriteBackground.style.display = "none";
+    }
+
+
 
 }
 
@@ -193,3 +192,5 @@ export function updateGenderSection(sexeMasculin, sexeFeminin) {
     </svg>`;
     }
 }
+
+

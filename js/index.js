@@ -1,9 +1,15 @@
 import changePokemon from "./changePokemon.js";
+import { showLoader, hideLoader } from "./loader.js";
 
 let randomButton = document.getElementById("pokeball");
 
-changePokemon();
+changePokemon(() => {
+    hideLoader();
+});
 
 randomButton.addEventListener("click", () => {
-    changePokemon();
+    showLoader();
+    changePokemon(() => {
+        hideLoader();
+    });
 })

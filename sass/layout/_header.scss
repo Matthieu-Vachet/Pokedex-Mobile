@@ -2,6 +2,27 @@
 // Ce fichier contient tous les styles liés à l'en-tête du site/de l'application.
 // -----------------------------------------------------------------------------
 
+.loader {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -40px;
+        margin-left: -40px;
+        z-index: 999;
+        display: none;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
 header {
         #header {
                 position: relative;
@@ -86,13 +107,14 @@ header {
 
                         & #svg {
                                 position: absolute;
-                                width: 250px;
+                                width: 300px;
                                 clip-path: none;
-                                top: calc(50% + 40px);
-                                left: calc(50% + 75px);
-                                animation: rotate 5s infinite linear;
+                                top: calc(50% + 50px);
+                                left: calc(50% + 60px);
+                                animation: rotate 10s infinite linear;
                                 fill: $light-gray;
                                 fill-opacity: 0.1;
+                                filter: opacity(0.4);
                         }
 
                         @keyframes rotate {
@@ -134,16 +156,19 @@ header {
                                 top: 0%;
                                 right: 0%;
                                 border-radius: 50%;
-                                border: 3px solid $white;
-                                background-color: rgba(221, 214, 214, 0.5);
+
 
                                 & img {
                                         position: relative;
                                         width: 110%;
                                         padding: 4px 10px 16px 10px;
                                         @include flex-center-center;
+                                        background-color: rgba(221, 214, 214, 0.29);
+                                        border-radius: 50%;
+                                        border: 1px solid rgba(221, 214, 214, 0.571);
                                 }
                         }
+
 
                         & #typePokemon2 {
                                 position: absolute;
@@ -154,7 +179,8 @@ header {
                                 & #type2 {
                                         position: relative;
                                         width: 38px;
-                                        padding-bottom: 1px;
+                                        border-radius: 10px 10px 10px 10px;
+                                        border: 3px solid $light-gray;
                                 }
 
                                 & #nameType2 {
@@ -173,7 +199,8 @@ header {
                                 & #type1 {
                                         position: relative;
                                         width: 38px;
-                                        padding-bottom: 1px;
+                                        border-radius: 10px 10px 10px 10px;
+                                        border: 3px solid $light-gray;
                                 }
 
                                 & #nameType1 {
@@ -183,6 +210,7 @@ header {
                                         
                                 }
                         }
+                
 
                         @if (hasSecondType) {
                                 #typePokemon2 {
