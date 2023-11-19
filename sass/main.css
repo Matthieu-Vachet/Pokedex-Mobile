@@ -23,6 +23,8 @@ html {
 
 body {
   width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   max-width: 390px;
   background-image: url("../../assets/background/background.jpg");
   background-repeat: no-repeat;
@@ -880,6 +882,55 @@ main #evolveSection #evolveInfo #evolveCondition {
   line-height: 16px;
 }
 
+footer {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 20px 0;
+}
+footer #Copyright_section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+footer #Copyright_section #copyright {
+  position: relative;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+}
+footer #Copyright_section #copyright_subtitle {
+  position: relative;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+}
+footer #social_section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 5px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+}
+footer #social_section a {
+  position: relative;
+}
+
 #button_random {
   width: 299px;
   height: 39px;
@@ -897,7 +948,12 @@ main #evolveSection #evolveInfo #evolveCondition {
   cursor: pointer;
   gap: 55px;
   transition: all 0.3s ease;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.5s ease;
+  box-shadow: 0px 5px 5px rgba(255, 136, 0, 0.285);
+}
+#button_random:hover {
+  transform: scale(1.1);
 }
 
 #button_generation {
@@ -918,13 +974,24 @@ main #evolveSection #evolveInfo #evolveCondition {
   gap: 35px;
   transition: all 0.3s ease;
   margin-bottom: 30px;
+  transition: transform 0.5s ease;
+  box-shadow: 0px 5px 5px rgba(255, 136, 0, 0.285);
+}
+#button_generation:hover {
+  transform: scale(1.1);
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  position: relative;
+}
+body header #header_section {
+  position: relative;
+}
+body header #header_section #logo_section {
+  position: relative;
 }
 body header #header_section #logo_section #logo_pokemon {
   position: relative;
@@ -944,7 +1011,17 @@ body header #header_section #title_section #title_home {
   font-family: "Audiowide";
 }
 body main #button-home {
-  padding-top: 350px;
+  position: relative;
+  padding-top: 300px;
+}
+body main #button-home #label_recherche {
+  position: relative;
+  font-size: 15px;
+  color: #ff8000;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+  text-transform: uppercase;
 }
 body main #button-home #recherche {
   position: relative;
@@ -953,6 +1030,7 @@ body main #button-home #recherche {
   justify-content: center;
   width: 300px;
   height: 40px;
+  margin-top: 10px;
   gap: 9px;
   background: none;
   border: none;
@@ -965,9 +1043,12 @@ body main #button-home #recherche {
   font-style: normal;
   font-family: "Audiowide";
 }
+body main #button-home #recherche:hover {
+  border-bottom: 3.5px solid #FF8000;
+}
 body main #button-home #recherche::-moz-placeholder {
-  color: #fff;
-  opacity: 0.5;
+  color: gray;
+  opacity: 0.2;
   font-size: 20px;
   color: #fff;
   font-weight: 400;
@@ -976,8 +1057,8 @@ body main #button-home #recherche::-moz-placeholder {
   text-align: center;
 }
 body main #button-home #recherche::placeholder {
-  color: #fff;
-  opacity: 0.5;
+  color: gray;
+  opacity: 0.2;
   font-size: 20px;
   color: #fff;
   font-weight: 400;
@@ -992,13 +1073,13 @@ body main #button-home #recherche:focus {
 body main #button-home #recherche::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
-  background-image: url("../../assets/icones/xmark.svg");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  fill: #007fff;
-  color: #FF8000;
+}
+body main #button-home #search_icon {
+  position: absolute;
+  top: 450px;
+  left: 270px;
   cursor: pointer;
+}
+body main #button-home #search_icon:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */

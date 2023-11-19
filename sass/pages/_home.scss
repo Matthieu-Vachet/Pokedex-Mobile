@@ -6,13 +6,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    position: relative;
 
     header {
         
         #header_section {
+            position: relative;
 
             #logo_section {
+                position: relative;
 
                 #logo_pokemon {
                     position: relative;
@@ -35,8 +37,17 @@ body {
 
     main {
 
+
         #button-home {
-            padding-top: 350px;
+            position: relative;
+            padding-top: 300px;
+
+
+            #label_recherche {
+                position: relative;
+                @include fontAudiowide400(15px, #ff8000);
+                text-transform: uppercase;
+            }
 
             #recherche {
                 position: relative;
@@ -45,6 +56,7 @@ body {
                 justify-content: center;
                 width: 300px;
                 height: 40px;
+                margin-top: 10px;
                 gap: 9px;
                 background: none;
                 border: none;
@@ -52,11 +64,15 @@ body {
                 border-radius: 20px;    
                 border-bottom: 1.75px solid #FF8000;
                 @include fontAudiowide400(20px, #fff);
+
+                &:hover {
+                    border-bottom: 3.5px solid #FF8000; 
+                }
                 
 
                 &::placeholder {
-                    color: #fff;
-                    opacity: 0.5;
+                    color: gray;
+                    opacity: 0.2;
                     @include fontAudiowide400(20px, #fff);
                     text-align: center;
                 }
@@ -69,17 +85,21 @@ body {
                 &::-webkit-search-cancel-button {
                     -webkit-appearance: none;
                     appearance: none;
-                    width: 20px;
-                    height: 20px;
-                    background-image: url("../../assets/icones/xmark.svg");
-                    background-color: transparent;
-                    background-repeat: no-repeat;
-                    background-size: 100% 100%;
-                    fill: invert(#FF8000);
-                    color: #FF8000;
-                    cursor: pointer;
                   }
             }
+
+            #search_icon {
+                position: absolute;
+                top: 450px;
+                left: 270px;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+                
+            }
+        
 }
 }
 

@@ -2,3 +2,45 @@
 // Ce fichier contient tous les styles liés au pied de page du site/de l'application.
 // -----------------------------------------------------------------------------
 
+footer {
+
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+
+    #Copyright_section {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+
+        #copyright {
+            position: relative;
+            @include fontAudiowide400(15px, #fff);
+        }
+
+        #copyright_subtitle {
+            position: relative;
+            @include fontAudiowide400(10px, #fff);
+        }
+    }
+
+    #social_section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 5px;
+        @include fontAudiowide400(15px, #fff);
+
+        a {
+            position: relative;
+        }
+    }
+}
