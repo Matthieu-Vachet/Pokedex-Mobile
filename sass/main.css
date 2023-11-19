@@ -24,6 +24,9 @@ html {
 body {
   width: 100vw;
   max-width: 390px;
+  background-image: url("../../assets/background/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 html,
@@ -400,16 +403,6 @@ header #visualSection #shinyType else #typePokemon1 {
   top: calc(50% + 152.5px);
 }
 
-main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 30px 30px 0 0;
-  margin-top: 25px;
-  box-shadow: 0px -7px 10px 10px rgba(0, 0, 0, 0.15);
-  z-index: 0;
-}
 main #mainSection {
   position: relative;
   display: flex;
@@ -885,4 +878,127 @@ main #evolveSection #evolveInfo #evolveCondition {
   font-style: normal;
   font-family: "Poppins";
   line-height: 16px;
+}
+
+#button_random {
+  width: 299px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  border-radius: 23px;
+  border: 1px solid #FF8000;
+  background: linear-gradient(90deg, #333 0%, #666 100%);
+  font-size: 24px;
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+  line-height: 32px;
+  cursor: pointer;
+  gap: 55px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#button_generation {
+  width: 299px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  border-radius: 23px;
+  border: 1px solid #FF8000;
+  background: linear-gradient(90deg, #333 0%, #666 100%);
+  font-size: 24px;
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+  line-height: 32px;
+  cursor: pointer;
+  gap: 35px;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body header #header_section #logo_section #logo_pokemon {
+  position: relative;
+  width: 300px;
+}
+body header #header_section #title_section {
+  position: relative;
+}
+body header #header_section #title_section #title_home {
+  position: absolute;
+  top: -25px;
+  left: 170px;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+}
+body main #button-home {
+  padding-top: 350px;
+}
+body main #button-home #recherche {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 40px;
+  gap: 9px;
+  background: none;
+  border: none;
+  align-self: stretch;
+  border-radius: 20px;
+  border-bottom: 1.75px solid #FF8000;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+}
+body main #button-home #recherche::-moz-placeholder {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+  text-align: center;
+}
+body main #button-home #recherche::placeholder {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+  text-align: center;
+}
+body main #button-home #recherche:focus {
+  outline: none;
+  text-align: center;
+}
+body main #button-home #recherche::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../assets/icones/xmark.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  fill: #007fff;
+  color: #FF8000;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

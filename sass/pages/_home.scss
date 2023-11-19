@@ -1,3 +1,86 @@
 // -----------------------------------------------------------------------------
 // Ce fichier contient des styles spécifiques à la page d'accueil.
 // -----------------------------------------------------------------------------
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    header {
+        
+        #header_section {
+
+            #logo_section {
+
+                #logo_pokemon {
+                    position: relative;
+                    width: 300px;
+                }
+            }
+
+            #title_section {
+                position: relative;
+                #title_home {
+                    position: absolute;
+                    top: -25px;
+                    left: 170px;
+                    @include fontAudiowide400(40px, #fff);
+                }
+        }
+        
+    }
+    }
+
+    main {
+
+        #button-home {
+            padding-top: 350px;
+
+            #recherche {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 300px;
+                height: 40px;
+                gap: 9px;
+                background: none;
+                border: none;
+                align-self: stretch;
+                border-radius: 20px;    
+                border-bottom: 1.75px solid #FF8000;
+                @include fontAudiowide400(20px, #fff);
+                
+
+                &::placeholder {
+                    color: #fff;
+                    opacity: 0.5;
+                    @include fontAudiowide400(20px, #fff);
+                    text-align: center;
+                }
+
+                &:focus {
+                    outline: none;
+                    text-align: center;
+                }
+
+                &::-webkit-search-cancel-button {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 20px;
+                    height: 20px;
+                    background-image: url("../../assets/icones/xmark.svg");
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    fill: invert(#FF8000);
+                    color: #FF8000;
+                    cursor: pointer;
+                  }
+            }
+}
+}
+
+}

@@ -55,3 +55,17 @@
   font-style: $style;
   font-family: $family;
 }
+
+@mixin fontAudiowide400(
+  $size,
+  $color,
+  $weight: 400,
+  $style: normal,
+  $family: "Audiowide",
+) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+  font-family: $family;
+}

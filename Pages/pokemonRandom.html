@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <title>Pokedex-Mobile</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="sass/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://kit.fontawesome.com/2ab0c45394.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/index.js" defer></script>
+
+</head>
+
+<body>
+
+    <div id="loader" class="loader"></div>
+
+    <header>
+        <div id="container">
+
+            <!-- Header Section -->
+            <div id="header">
+                <!-- Flêche -->
+                <i class="fa-solid fa-chevron-left fa-2xl"></i>
+                <!-- Name -->
+                <div id="name">
+                    <h1 id="Pokemon_name"></h1>
+                    <p id="Pokemon_id"></p>
+                </div>
+                <!-- Menu -->
+                <div id="pokeball">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path
+                            d="M24.2619 20C24.2619 22.3538 22.3538 24.2619 20 24.2619C17.6462 24.2619 15.7381 22.3538 15.7381 20C15.7381 17.6462 17.6462 15.7381 20 15.7381C22.3538 15.7381 24.2619 17.6462 24.2619 20ZM39.2122 23.3571C37.6213 32.5268 29.6245 39.5 20 39.5C10.3754 39.5 2.37867 32.5268 0.787791 23.3571H11.5702C12.9044 26.7046 16.1752 29.0714 20 29.0714C23.8247 29.0714 27.0955 26.7046 28.4298 23.3571H39.2122ZM20 10.9286C16.1752 10.9286 12.9044 13.2954 11.5702 16.6429H0.787791C2.37867 7.47321 10.3754 0.5 20 0.5C29.6245 0.5 37.6213 7.47321 39.2122 16.6429H28.4298C27.0955 13.2954 23.8247 10.9286 20 10.9286Z"
+                            stroke="white" />
+                    </svg>
+                </div>
+            </div>
+            <section id="visualSection">
+                <!-- Name JPN -->
+                <h2 id="nameJpn"></h2>
+                <div id="imagePokemon">
+                    <!-- Pokeball SVG -->
+                    <svg id="svg" xmlns="http://www.w3.org/2000/svg" width="306" height="306" viewBox="0 0 306 306"
+                        fill="none">
+                        <g clip-path="url(#clip0_1322_22)">
+                            <path
+                                d="M101.375 63.5829C52.044 92.0642 35.1016 155.294 63.5829 204.625C92.0641 253.956 155.294 270.898 204.625 242.417C253.956 213.936 270.898 150.706 242.417 101.375C213.892 51.9683 150.706 35.1017 101.375 63.5829ZM137.556 126.251C152.333 117.719 171.294 122.736 179.825 137.513C188.356 152.289 183.34 171.25 168.488 179.825C153.635 188.4 134.706 183.264 126.175 168.488C117.644 153.711 122.78 134.782 137.556 126.251ZM80.5478 202.509L117.982 180.897C131.548 197.919 155.882 202.966 175.356 191.722C194.755 180.522 202.627 156.882 194.668 136.622L232.102 115.009C251.809 155.968 236.892 205.905 196.881 229.005C156.871 252.105 106.166 240.055 80.5478 202.509Z"
+                                fill="white" fill-opacity="0.03" />
+                            <path
+                                d="M80.2978 202.076L79.831 202.346L80.1348 202.791C105.899 240.551 156.892 252.67 197.131 229.438C237.37 206.206 252.372 155.985 232.553 114.792L232.319 114.307L231.852 114.576L194.418 136.189L194.046 136.404L194.203 136.804C202.072 156.837 194.288 180.215 175.106 191.289C155.849 202.407 131.787 197.417 118.373 180.585L118.104 180.248L117.732 180.464L80.2978 202.076ZM64.0159 204.375C35.6727 155.283 52.5332 92.3591 101.625 64.0159C150.717 35.6726 213.597 52.4577 241.984 101.625C270.327 150.717 253.467 213.641 204.375 241.984C155.283 270.327 92.3591 253.467 64.0159 204.375ZM180.258 137.263C171.588 122.245 152.32 117.149 137.306 125.818C122.292 134.486 117.072 153.72 125.742 168.738C134.411 183.752 153.645 188.972 168.738 180.258C183.83 171.545 188.927 152.277 180.258 137.263Z"
+                                stroke="white" stroke-opacity="0.3" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1322_22">
+                                <rect width="224" height="224" fill="white"
+                                    transform="translate(0.00515747 112.005) rotate(-30)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <!-- Image Pokemon -->
+                    <img id="spriteRegular" src="" alt="">
+                </div>
+                <div id="shinyType">
+                    <div id="imageShiny">
+                        <!-- Image Pokemon Shiny -->
+                        <img id="spriteShiny" src="" alt="">
+                    </div>
+                    <div id="typePokemon2">
+                        <!-- Type Pokemon 1 -->
+                        <img id="type2" src="" alt="">
+                        <p id="nameType2"></p>
+                    </div>
+                    <div id="typePokemon1">
+                        <!-- Type Pokemon 2 -->
+                        <img id="type1" src="" alt="">
+                        <p id="nameType1"></p>
+                    </div>
+                </div>
+            </section>
+    </header>
+
+    <main>
+        <section id="mainSection">
+            <div id="genreSection">
+            </div>
+            <div id="descSection">
+                <!-- Description Pokemon -->
+                <p id="descValue"></p>
+            </div>
+        </section>
+
+        <section id="heightWeightSection">
+            <!-- Height -->
+            <div id="height">
+                <h2 id="heightTitle">Taille</h2>
+                <p id="heightValue"></p>
+            </div>
+            <div id="separator">
+            </div>
+            <!-- Weight -->
+            <div id="weight">
+                <h2 id="weightTitle">Poids</h2>
+                <p id="weightValue"></p>
+            </div>
+        </section>
+
+        <Section id="capacitéSection">
+            <!-- Capacité 1 -->
+            <div id="capacité1">
+                <p>1</p>
+                <h3 id="capacitéTitle1"></h3>
+            </div>
+            <!-- Capacité 2 -->
+            <div id="capacité2">
+                <h3 id="capacitéTitle2"></h3>
+                <p>2</p>
+            </div>
+            <!-- Capacité 3 -->
+            <div id="capacité3">
+                <p>3</p>
+                <div id="capacitéSecret">
+                    <i class="fa-solid fa-star"></i>
+                    <h3 id="capacitéTitleSecret"></h3>
+                </div>
+            </div>
+        </Section>
+
+        <section id="statsSection">
+            <div id="statsRight">
+                <div id="nameStatsRight">
+                    <p>Pv</p>
+                    <p>Attaque</p>
+                    <p>Defense</p>
+                </div>
+                <div id="valueStatsRight">
+                    <p id="pv"></p>
+                    <p id="attaque"></p>
+                    <p id="defense"></p>
+                </div>
+            </div>
+            <div id="separatorStats">
+            </div>
+            <div id="statsLeft">
+                <div id="nameStatsLeft">
+                    <p>Attaque Spé</p>
+                    <p>Défence Spé</p>
+                    <p>Vitesse</p>
+                </div>
+                <div id="valueStatsLeft">
+                    <p id="attaqueSpé"></p>
+                    <p id="defenseSpé"></p>
+                    <p id="vitesse"></p>
+                </div>
+            </div>
+
+            <div id="generationInfos">
+                <p id="generationText"></p>
+            </div>
+            <div id="MegaSprite">
+                <img id="MegaSpriteBackground" src="./assets/images/gmax-regular.png" alt="">
+            </div>
+        </section>
+
+        <section id="resistanceSection">
+            <div id="resistanceTitle">
+                <h2>RÉSISTANCES</h2>
+            </div>
+            <div id="resistanceLogo">
+                <div id="normal">
+                    <img src="assets/icones/types/normal.png" alt="">
+                    <p id="normalValue"></p>
+                </div>
+                <div id="plante">
+                    <img src="assets/icones/types/plante.png" alt="">
+                    <p id="planteValue"></p>
+                </div>
+                <div id="feu">
+                    <img src="assets/icones/types/feu.png" alt="">
+                    <p id="feuValue"></p>
+                </div>
+                <div id="eau">
+                    <img src="assets/icones/types/eau.png" alt="">
+                    <p id="eauValue"></p>
+                </div>
+                <div id="electrique">
+                    <img src="assets/icones/types/electrique.png" alt="">
+                    <p id="electriqueValue"></p>
+                </div>
+                <div id="glace">
+                    <img src="assets/icones/types/glace.png" alt="">
+                    <p id="glaceValue"></p>
+                </div>
+                <div id="combat">
+                    <img src="assets/icones/types/combat.png" alt="">
+                    <p id="combatValue"></p>
+                </div>
+                <div id="poison">
+                    <img src="assets/icones/types/poison.png" alt="">
+                    <p id="poisonValue"></p>
+                </div>
+                <div id="sol">
+                    <img src="assets/icones/types/sol.png" alt="">
+                    <p id="solValue"></p>
+                </div>
+            </div>
+            <div id="resistanceLogo">
+                <div id="vol">
+                    <img src="assets/icones/types/vol.png" alt="">
+                    <p id="volValue"></p>
+                </div>
+                <div id="psy">
+                    <img src="assets/icones/types/psy.png" alt="">
+                    <p id="psyValue"></p>
+                </div>
+                <div id="insecte">
+                    <img src="assets/icones/types/insecte.png" alt="">
+                    <p id="insecteValue"></p>
+                </div>
+                <div id="roche">
+                    <img src="assets/icones/types/roche.png" alt="">
+                    <p id="rocheValue"></p>
+                </div>
+                <div id="spectre">
+                    <img src="assets/icones/types/spectre.png" alt="">
+                    <p id="spectreValue"></p>
+                </div>
+                <div id="dragon">
+                    <img src="assets/icones/types/dragon.png" alt="">
+                    <p id="dragonValue"></p>
+                </div>
+                <div id="tenebre">
+                    <img src="assets/icones/types/tenebre.png" alt="">
+                    <p id="tenebreValue"></p>
+                </div>
+                <div id="acier">
+                    <img src="assets/icones/types/acier.png" alt="">
+                    <p id="acierValue"></p>
+                </div>
+                <div id="fee">
+                    <img src="assets/icones/types/fee.png" alt="">
+                    <p id="feeValue"></p>
+                </div>
+            </div>
+            <div id="resistanceTuto">
+                <p>X1 Inefficacité</p>
+                <p>X0.5 Résistance</p>
+                <p>X0.25 Double résistance</p>
+                <p>X2 Faiblesse</p>
+                <p>X4 Double faiblesse</p>
+            </div>
+        </section>
+        <section id="evolveSection">
+            <h2 id="evolveTitle">Evolutions</h2>
+            <div id="evolveInfo">
+                <div id="evolveName">
+                    <p id="evolveNameText"></p>
+                    <p id="evolveNameId"></p>
+                </div>
+                <div id="evolveCondition">
+                    <p id="evolveConditionText"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+    </div>
+
+</body>
+
+</html>

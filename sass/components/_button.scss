@@ -1,3 +1,36 @@
 // -----------------------------------------------------------------------------
 // Ce fichier contient tous les styles liés au composant de bouton.
 // -----------------------------------------------------------------------------
+
+
+#button_random {
+    width: 299px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    border-radius: 23px;
+    border: 1px solid #FF8000;
+    background: linear-gradient(90deg, #333 0%, #666 100%);
+    @include fontAudiowide400(24px, white);
+    line-height: 32px;
+    cursor: pointer;
+    gap: 55px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#button_generation {
+    width: 299px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    border-radius: 23px;
+    border: 1px solid #FF8000;
+    background: linear-gradient(90deg, #333 0%, #666 100%);
+    @include fontAudiowide400(24px, white);
+    line-height: 32px;
+    cursor: pointer;
+    gap: 35px;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
