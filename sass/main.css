@@ -24,7 +24,6 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   max-width: 390px;
   background-image: url("../../assets/background/background.jpg");
   background-repeat: no-repeat;
@@ -170,7 +169,7 @@ table {
 /**
  * Style de typographie de base pour copier du texte
  */
-.loader {
+#loader_random {
   border: 16px solid #f3f3f3;
   border-top: 16px solid #3498db;
   border-radius: 50%;
@@ -405,13 +404,23 @@ header #visualSection #shinyType else #typePokemon1 {
   top: calc(50% + 152.5px);
 }
 
-main #mainSection {
+#main_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px 30px 0 0;
+  margin-top: 25px;
+  box-shadow: 0px -7px 10px 10px rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+#main_container #mainSection {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main #mainSection #genreSection {
+#main_container #mainSection #genreSection {
   position: absolute;
   display: flex;
   align-items: center;
@@ -419,14 +428,14 @@ main #mainSection #genreSection {
   top: 6px;
   right: 75%;
 }
-main #mainSection #descSection {
+#main_container #mainSection #descSection {
   position: relative;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: 10px;
 }
-main #mainSection #descSection p {
+#main_container #mainSection #descSection p {
   position: relative;
   font-size: 12px;
   color: #666666;
@@ -437,7 +446,7 @@ main #mainSection #descSection p {
   text-align: center;
   padding: 4px 15px;
 }
-main #mainSection #megaSection {
+#main_container #mainSection #megaSection {
   position: absolute;
   display: flex;
   align-items: center;
@@ -445,12 +454,12 @@ main #mainSection #megaSection {
   top: 7px;
   left: 73%;
 }
-main #mainSection #megaSection img {
+#main_container #mainSection #megaSection img {
   position: relative;
   width: 30px;
   height: 30px;
 }
-main #mainSection #megaSection p {
+#main_container #mainSection #megaSection p {
   position: relative;
   font-size: 10px;
   color: #666666;
@@ -459,14 +468,14 @@ main #mainSection #megaSection p {
   font-family: "Poppins";
   line-height: 16px;
 }
-main #heightWeightSection {
+#main_container #heightWeightSection {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 27px;
 }
-main #heightWeightSection #height {
+#main_container #heightWeightSection #height {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -475,7 +484,7 @@ main #heightWeightSection #height {
   width: 35%;
   text-transform: uppercase;
 }
-main #heightWeightSection #height h2 {
+#main_container #heightWeightSection #height h2 {
   position: relative;
   font-size: 14px;
   color: #666666;
@@ -484,7 +493,7 @@ main #heightWeightSection #height h2 {
   font-family: "Poppins";
   line-height: 16px;
 }
-main #heightWeightSection #height p {
+#main_container #heightWeightSection #height p {
   position: relative;
   font-size: 25px;
   color: #666666;
@@ -497,7 +506,7 @@ main #heightWeightSection #height p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-main #heightWeightSection #weight {
+#main_container #heightWeightSection #weight {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -506,7 +515,7 @@ main #heightWeightSection #weight {
   width: 35%;
   text-transform: uppercase;
 }
-main #heightWeightSection #weight h2 {
+#main_container #heightWeightSection #weight h2 {
   position: relative;
   font-size: 14px;
   color: #666666;
@@ -515,7 +524,7 @@ main #heightWeightSection #weight h2 {
   font-family: "Poppins";
   line-height: 16px;
 }
-main #heightWeightSection #weight p {
+#main_container #heightWeightSection #weight p {
   position: relative;
   font-size: 25px;
   color: #666666;
@@ -528,7 +537,7 @@ main #heightWeightSection #weight p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-main #capacitéSection {
+#main_container #capacitéSection {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -537,11 +546,11 @@ main #capacitéSection {
   padding-top: 10px;
   gap: 7px;
 }
-main #capacitéSection #capacité1, main #capacitéSection #capacité2, main #capacitéSection #capacité3 {
+#main_container #capacitéSection #capacité1, #main_container #capacitéSection #capacité2, #main_container #capacitéSection #capacité3 {
   display: flex;
   align-items: center;
 }
-main #capacitéSection #capacité1 {
+#main_container #capacitéSection #capacité1 {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -552,7 +561,7 @@ main #capacitéSection #capacité1 {
   margin-right: 15%;
   padding: 0 20px;
 }
-main #capacitéSection #capacité2 {
+#main_container #capacitéSection #capacité2 {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -563,7 +572,7 @@ main #capacitéSection #capacité2 {
   margin-left: 15%;
   padding: 0 20px;
 }
-main #capacitéSection #capacité3 {
+#main_container #capacitéSection #capacité3 {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -575,16 +584,16 @@ main #capacitéSection #capacité3 {
   padding: 0 20px;
   gap: 10px;
 }
-main #capacitéSection #capacité3 #capacitéSecret {
+#main_container #capacitéSection #capacité3 #capacitéSecret {
   position: relative;
   display: flex;
   gap: 5px;
 }
-main #capacitéSection #capacité3 #capacitéSecret i {
+#main_container #capacitéSection #capacité3 #capacitéSecret i {
   position: relative;
   color: #FFFFFF;
 }
-main #capacitéSection #capacitéTitle1, main #capacitéSection #capacitéTitle2, main #capacitéSection #capacitéTitleSecret {
+#main_container #capacitéSection #capacitéTitle1, #main_container #capacitéSection #capacitéTitle2, #main_container #capacitéSection #capacitéTitleSecret {
   position: relative;
   width: auto;
   height: auto;
@@ -595,7 +604,7 @@ main #capacitéSection #capacitéTitle1, main #capacitéSection #capacitéTitle2
   font-family: "Poppins";
   line-height: 16px;
 }
-main #capacitéSection p {
+#main_container #capacitéSection p {
   position: relative;
   font-size: 20px;
   color: #FFFFFF;
@@ -603,14 +612,14 @@ main #capacitéSection p {
   font-style: normal;
   font-family: "Poppins";
 }
-main #separator {
+#main_container #separator {
   position: relative;
   display: flex;
   height: 56px;
   width: 3px;
   background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
 }
-main #statsSection {
+#main_container #statsSection {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -618,13 +627,13 @@ main #statsSection {
   align-items: center;
   margin: 10px 50px 13px 50px;
 }
-main #statsSection #statsRight {
+#main_container #statsSection #statsRight {
   position: relative;
   display: flex;
   flex-direction: row;
   width: 50%;
 }
-main #statsSection #statsRight #nameStatsRight {
+#main_container #statsSection #statsRight #nameStatsRight {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -638,7 +647,7 @@ main #statsSection #statsRight #nameStatsRight {
   font-family: "Poppins";
   gap: 22px;
 }
-main #statsSection #statsRight #valueStatsRight {
+#main_container #statsSection #statsRight #valueStatsRight {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -658,20 +667,20 @@ main #statsSection #statsRight #valueStatsRight {
   line-height: 32px;
   padding-right: 10px;
 }
-main #statsSection #separatorStats {
+#main_container #statsSection #separatorStats {
   position: relative;
   display: flex;
   height: 95px;
   width: 3px;
   background: linear-gradient(90deg, #b7bfce 5.21%, #6493eb 100%);
 }
-main #statsSection #statsLeft {
+#main_container #statsSection #statsLeft {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
   width: 50%;
 }
-main #statsSection #statsLeft #nameStatsLeft {
+#main_container #statsSection #statsLeft #nameStatsLeft {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -686,7 +695,7 @@ main #statsSection #statsLeft #nameStatsLeft {
   font-family: "Poppins";
   gap: 22px;
 }
-main #statsSection #statsLeft #valueStatsLeft {
+#main_container #statsSection #statsLeft #valueStatsLeft {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -706,13 +715,13 @@ main #statsSection #statsLeft #valueStatsLeft {
   line-height: 32px;
   padding-left: 10px;
 }
-main #generationInfos {
+#main_container #generationInfos {
   position: absolute;
   display: flex;
   bottom: 20%;
   left: 109%;
 }
-main #generationInfos #generationText {
+#main_container #generationInfos #generationText {
   font-size: 15px;
   color: #000;
   font-weight: 300;
@@ -726,25 +735,25 @@ main #generationInfos #generationText {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-main #MegaSprite {
+#main_container #MegaSprite {
   position: absolute;
   z-index: -1;
   bottom: 120px;
   right: 280px;
 }
-main #MegaSprite #MegaSpriteBackground {
+#main_container #MegaSprite #MegaSpriteBackground {
   position: absolute;
   width: 300px;
   height: 300px;
   overflow: hidden;
   opacity: 0.2;
 }
-main #resistanceSection {
+#main_container #resistanceSection {
   position: relative;
   display: flex;
   flex-direction: column;
 }
-main #resistanceSection #resistanceTitle {
+#main_container #resistanceSection #resistanceTitle {
   position: relative;
   width: 100%;
   display: flex;
@@ -753,7 +762,7 @@ main #resistanceSection #resistanceTitle {
   text-transform: uppercase;
   margin-bottom: 11px;
 }
-main #resistanceSection #resistanceTitle h2 {
+#main_container #resistanceSection #resistanceTitle h2 {
   font-size: 14px;
   color: #666666;
   font-weight: 700;
@@ -761,25 +770,25 @@ main #resistanceSection #resistanceTitle h2 {
   font-family: "Poppins";
   line-height: 16px;
 }
-main #resistanceSection #resistanceLogo {
+#main_container #resistanceSection #resistanceLogo {
   position: relative;
   width: 100%;
   display: flex;
 }
-main #resistanceSection #resistanceLogo div {
+#main_container #resistanceSection #resistanceLogo div {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main #resistanceSection #resistanceLogo div img {
+#main_container #resistanceSection #resistanceLogo div img {
   position: relative;
   width: 30px;
   height: 30px;
   border-radius: 5px;
 }
-main #resistanceSection #resistanceLogo div p {
+#main_container #resistanceSection #resistanceLogo div p {
   position: relative;
   width: auto;
   font-size: 10px;
@@ -789,7 +798,7 @@ main #resistanceSection #resistanceLogo div p {
   font-family: "Poppins";
   line-height: 16px;
 }
-main #resistanceSection #resistanceTuto {
+#main_container #resistanceSection #resistanceTuto {
   position: relative;
   width: 100%;
   display: flex;
@@ -799,7 +808,7 @@ main #resistanceSection #resistanceTuto {
   gap: 6px;
   margin-top: 9px;
 }
-main #resistanceSection #resistanceTuto p {
+#main_container #resistanceSection #resistanceTuto p {
   position: relative;
   font-size: 7px;
   color: #666666;
@@ -808,7 +817,7 @@ main #resistanceSection #resistanceTuto p {
   font-family: "Poppins";
   line-height: 12px;
 }
-main #evolveSection {
+#main_container #evolveSection {
   position: relative;
   width: 100%;
   background: linear-gradient(90deg, #B7BFCE 5.21%, #6493EB 100%);
@@ -819,7 +828,7 @@ main #evolveSection {
   align-items: center;
   justify-content: center;
 }
-main #evolveSection #evolveTitle {
+#main_container #evolveSection #evolveTitle {
   position: relative;
   display: flex;
   width: 50%;
@@ -836,7 +845,7 @@ main #evolveSection #evolveTitle {
   padding: 5px 0;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
 }
-main #evolveSection #evolveInfo {
+#main_container #evolveSection #evolveInfo {
   position: relative;
   width: 100%;
   display: flex;
@@ -847,7 +856,7 @@ main #evolveSection #evolveInfo {
   padding-bottom: 10px;
   gap: 10px;
 }
-main #evolveSection #evolveInfo #evolveName {
+#main_container #evolveSection #evolveInfo #evolveName {
   position: relative;
   width: 100%;
   display: flex;
@@ -856,14 +865,14 @@ main #evolveSection #evolveInfo #evolveName {
   text-transform: uppercase;
   gap: 10px;
 }
-main #evolveSection #evolveInfo #evolveName #evolveNameText {
+#main_container #evolveSection #evolveInfo #evolveName #evolveNameText {
   font-size: 15px;
   color: #FFFFFF;
   font-weight: 400;
   font-style: normal;
   font-family: "Poppins";
 }
-main #evolveSection #evolveInfo #evolveName #evolveNameId {
+#main_container #evolveSection #evolveInfo #evolveName #evolveNameId {
   position: relative;
   font-size: 15px;
   color: #FFFFFF;
@@ -872,7 +881,7 @@ main #evolveSection #evolveInfo #evolveName #evolveNameId {
   font-family: "Poppins";
   line-height: 16px;
 }
-main #evolveSection #evolveInfo #evolveCondition {
+#main_container #evolveSection #evolveInfo #evolveCondition {
   position: relative;
   font-size: 10px;
   color: #FFFFFF;
@@ -882,13 +891,13 @@ main #evolveSection #evolveInfo #evolveCondition {
   line-height: 16px;
 }
 
-footer {
+#footer_container {
   position: relative;
   width: 100%;
   height: 100px;
   margin: 20px 0;
 }
-footer #Copyright_section {
+#footer_container #Copyright_section {
   position: relative;
   width: 100%;
   height: auto;
@@ -898,7 +907,7 @@ footer #Copyright_section {
   flex-direction: column;
   gap: 5px;
 }
-footer #Copyright_section #copyright {
+#footer_container #Copyright_section #copyright {
   position: relative;
   font-size: 15px;
   color: #fff;
@@ -906,7 +915,7 @@ footer #Copyright_section #copyright {
   font-style: normal;
   font-family: "Audiowide";
 }
-footer #Copyright_section #copyright_subtitle {
+#footer_container #Copyright_section #copyright_subtitle {
   position: relative;
   font-size: 10px;
   color: #fff;
@@ -914,7 +923,7 @@ footer #Copyright_section #copyright_subtitle {
   font-style: normal;
   font-family: "Audiowide";
 }
-footer #social_section {
+#footer_container #social_section {
   position: relative;
   display: flex;
   align-items: center;
@@ -927,7 +936,7 @@ footer #social_section {
   font-style: normal;
   font-family: "Audiowide";
 }
-footer #social_section a {
+#footer_container #social_section a {
   position: relative;
 }
 
@@ -981,26 +990,86 @@ footer #social_section a {
   transform: scale(1.1);
 }
 
-body {
+#loader_container {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.352);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+}
+#loader_container #loader {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  box-shadow: -20px 0 rgba(0, 0, 0, 0.1) inset;
+  animation: roll 1s ease-in-out infinite;
+  background: linear-gradient(to bottom, #e83e35 0%, #e83e35 50.5%, #ffffff 50.51%, #ffffff 100%);
+}
+#loader_container #loader:after {
+  content: "";
+  position: absolute;
+  top: 97px;
+  left: 0;
+  width: 200px;
+  height: 6px;
+  background: #3f3f3f;
+}
+#loader_container #loader:before {
+  content: "";
+  position: absolute;
+  top: 67px;
+  left: 67px;
+  width: 54px;
+  height: 54px;
+  border: solid 6px #3f3f3f;
+  border-radius: 50%;
+  background: white;
+  z-index: 3;
+  box-shadow: 0 0 15px -2px #c62828 inset;
+  animation: button 10s ease infinite;
+}
+@keyframes roll {
+  from {
+    transform: rotate(0);
+  }
+  90%, to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes button {
+  from, 50%, to {
+    box-shadow: 0 0 15px -2px #c62828 inset;
+  }
+  25%, 75% {
+    box-shadow: 0 0 10px -2px #1300ea inset;
+  }
+}
+#body_container {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
-body header #header_section {
+#body_container header #header_section {
   position: relative;
 }
-body header #header_section #logo_section {
+#body_container header #header_section #logo_section {
   position: relative;
 }
-body header #header_section #logo_section #logo_pokemon {
+#body_container header #header_section #logo_section #logo_pokemon {
   position: relative;
   width: 300px;
 }
-body header #header_section #title_section {
+#body_container header #header_section #title_section {
   position: relative;
 }
-body header #header_section #title_section #title_home {
+#body_container header #header_section #title_section #title_home {
   position: absolute;
   top: -25px;
   left: 170px;
@@ -1010,11 +1079,11 @@ body header #header_section #title_section #title_home {
   font-style: normal;
   font-family: "Audiowide";
 }
-body main #button-home {
+#body_container main #button-home {
   position: relative;
   padding-top: 300px;
 }
-body main #button-home #label_recherche {
+#body_container main #button-home #label_recherche {
   position: relative;
   font-size: 15px;
   color: #ff8000;
@@ -1023,7 +1092,7 @@ body main #button-home #label_recherche {
   font-family: "Audiowide";
   text-transform: uppercase;
 }
-body main #button-home #recherche {
+#body_container main #button-home #recherche {
   position: relative;
   display: flex;
   align-items: center;
@@ -1043,10 +1112,10 @@ body main #button-home #recherche {
   font-style: normal;
   font-family: "Audiowide";
 }
-body main #button-home #recherche:hover {
+#body_container main #button-home #recherche:hover {
   border-bottom: 3.5px solid #FF8000;
 }
-body main #button-home #recherche::-moz-placeholder {
+#body_container main #button-home #recherche::-moz-placeholder {
   color: gray;
   opacity: 0.2;
   font-size: 20px;
@@ -1056,7 +1125,7 @@ body main #button-home #recherche::-moz-placeholder {
   font-family: "Audiowide";
   text-align: center;
 }
-body main #button-home #recherche::placeholder {
+#body_container main #button-home #recherche::placeholder {
   color: gray;
   opacity: 0.2;
   font-size: 20px;
@@ -1066,20 +1135,20 @@ body main #button-home #recherche::placeholder {
   font-family: "Audiowide";
   text-align: center;
 }
-body main #button-home #recherche:focus {
+#body_container main #button-home #recherche:focus {
   outline: none;
   text-align: center;
 }
-body main #button-home #recherche::-webkit-search-cancel-button {
+#body_container main #button-home #recherche::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
 }
-body main #button-home #search_icon {
+#body_container main #button-home #search_icon {
   position: absolute;
-  top: 450px;
+  top: 460px;
   left: 270px;
   cursor: pointer;
 }
-body main #button-home #search_icon:hover {
+#body_container main #button-home #search_icon:hover {
   transform: scale(1.1);
 }/*# sourceMappingURL=main.css.map */

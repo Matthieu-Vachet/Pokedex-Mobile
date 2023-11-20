@@ -22,10 +22,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://kit.fontawesome.com/2ab0c45394.js" crossorigin="anonymous"></script>
-
+    <script type="module" src="js/link.js" defer></script>
 </head>
 
-<body>
+<body style="overflow: hidden;">
+    <div id="body_container">
     <header>
         <section id="header_section">
             <div id="logo_section">
@@ -39,7 +40,7 @@
 
     <main>
         <div id="button-home">
-            <button id="button_random">
+            <button src="/Pages/pokemonRandom.html" id="button_random">
                 <i class="fa-solid fa-shuffle" style="color: #ffa200;"></i>
                 Aléatoire
             </button>
@@ -67,6 +68,7 @@
     </main>
 
     <footer>
+        <section id="footer_container">
         <div id="Copyright_section">
             <h3 id="copyright">© 2023 MatWeb Innovations</h3>
             <p id="copyright_subtitle">Tous droits réservés</p>
@@ -77,9 +79,9 @@
             <a href="https://twitter.com/Tremp" target="_blank"><i class="fa-brands fa-twitter"></i></a>
         </div>
 
-
+    </section>
     </footer>
-
+</div>
 </body>
 
 </html>

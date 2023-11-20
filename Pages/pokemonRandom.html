@@ -17,17 +17,17 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="../sass/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://kit.fontawesome.com/2ab0c45394.js" crossorigin="anonymous"></script>
-    <script type="module" src="js/index.js" defer></script>
+    <script type="module" src="../js/index.js" defer></script>
 
 </head>
 
 <body>
+    <div id="loader_random"></div>
 
-    <div id="loader" class="loader"></div>
 
     <header>
         <div id="container">
@@ -35,8 +35,7 @@
             <!-- Header Section -->
             <div id="header">
                 <!-- Flêche -->
-                <i class="fa-solid fa-chevron-left fa-2xl"></i>
-                <!-- Name -->
+                <a href="../index.html"><i class="fa-solid fa-chevron-left fa-2xl"></i></a> <!-- Name -->
                 <div id="name">
                     <h1 id="Pokemon_name"></h1>
                     <p id="Pokemon_id"></p>
@@ -95,193 +94,194 @@
     </header>
 
     <main>
-        <section id="mainSection">
-            <div id="genreSection">
-            </div>
-            <div id="descSection">
-                <!-- Description Pokemon -->
-                <p id="descValue"></p>
-            </div>
-        </section>
+        <div id="main_container">
+            <section id="mainSection">
+                <div id="genreSection">
+                </div>
+                <div id="descSection">
+                    <!-- Description Pokemon -->
+                    <p id="descValue"></p>
+                </div>
+            </section>
 
-        <section id="heightWeightSection">
-            <!-- Height -->
-            <div id="height">
-                <h2 id="heightTitle">Taille</h2>
-                <p id="heightValue"></p>
-            </div>
-            <div id="separator">
-            </div>
-            <!-- Weight -->
-            <div id="weight">
-                <h2 id="weightTitle">Poids</h2>
-                <p id="weightValue"></p>
-            </div>
-        </section>
+            <section id="heightWeightSection">
+                <!-- Height -->
+                <div id="height">
+                    <h2 id="heightTitle">Taille</h2>
+                    <p id="heightValue"></p>
+                </div>
+                <div id="separator">
+                </div>
+                <!-- Weight -->
+                <div id="weight">
+                    <h2 id="weightTitle">Poids</h2>
+                    <p id="weightValue"></p>
+                </div>
+            </section>
 
-        <Section id="capacitéSection">
-            <!-- Capacité 1 -->
-            <div id="capacité1">
-                <p>1</p>
-                <h3 id="capacitéTitle1"></h3>
-            </div>
-            <!-- Capacité 2 -->
-            <div id="capacité2">
-                <h3 id="capacitéTitle2"></h3>
-                <p>2</p>
-            </div>
-            <!-- Capacité 3 -->
-            <div id="capacité3">
-                <p>3</p>
-                <div id="capacitéSecret">
-                    <i class="fa-solid fa-star"></i>
-                    <h3 id="capacitéTitleSecret"></h3>
+            <Section id="capacitéSection">
+                <!-- Capacité 1 -->
+                <div id="capacité1">
+                    <p>1</p>
+                    <h3 id="capacitéTitle1"></h3>
                 </div>
-            </div>
-        </Section>
+                <!-- Capacité 2 -->
+                <div id="capacité2">
+                    <h3 id="capacitéTitle2"></h3>
+                    <p>2</p>
+                </div>
+                <!-- Capacité 3 -->
+                <div id="capacité3">
+                    <p>3</p>
+                    <div id="capacitéSecret">
+                        <i class="fa-solid fa-star"></i>
+                        <h3 id="capacitéTitleSecret"></h3>
+                    </div>
+                </div>
+            </Section>
 
-        <section id="statsSection">
-            <div id="statsRight">
-                <div id="nameStatsRight">
-                    <p>Pv</p>
-                    <p>Attaque</p>
-                    <p>Defense</p>
+            <section id="statsSection">
+                <div id="statsRight">
+                    <div id="nameStatsRight">
+                        <p>Pv</p>
+                        <p>Attaque</p>
+                        <p>Defense</p>
+                    </div>
+                    <div id="valueStatsRight">
+                        <p id="pv"></p>
+                        <p id="attaque"></p>
+                        <p id="defense"></p>
+                    </div>
                 </div>
-                <div id="valueStatsRight">
-                    <p id="pv"></p>
-                    <p id="attaque"></p>
-                    <p id="defense"></p>
+                <div id="separatorStats">
                 </div>
-            </div>
-            <div id="separatorStats">
-            </div>
-            <div id="statsLeft">
-                <div id="nameStatsLeft">
-                    <p>Attaque Spé</p>
-                    <p>Défence Spé</p>
-                    <p>Vitesse</p>
+                <div id="statsLeft">
+                    <div id="nameStatsLeft">
+                        <p>Attaque Spé</p>
+                        <p>Défence Spé</p>
+                        <p>Vitesse</p>
+                    </div>
+                    <div id="valueStatsLeft">
+                        <p id="attaqueSpé"></p>
+                        <p id="defenseSpé"></p>
+                        <p id="vitesse"></p>
+                    </div>
                 </div>
-                <div id="valueStatsLeft">
-                    <p id="attaqueSpé"></p>
-                    <p id="defenseSpé"></p>
-                    <p id="vitesse"></p>
-                </div>
-            </div>
 
-            <div id="generationInfos">
-                <p id="generationText"></p>
-            </div>
-            <div id="MegaSprite">
-                <img id="MegaSpriteBackground" src="./assets/images/gmax-regular.png" alt="">
-            </div>
-        </section>
+                <div id="generationInfos">
+                    <p id="generationText"></p>
+                </div>
+                <div id="MegaSprite">
+                    <img id="MegaSpriteBackground" src="../assets/images/gmax-regular.png" alt="">
+                </div>
+            </section>
 
-        <section id="resistanceSection">
-            <div id="resistanceTitle">
-                <h2>RÉSISTANCES</h2>
-            </div>
-            <div id="resistanceLogo">
-                <div id="normal">
-                    <img src="assets/icones/types/normal.png" alt="">
-                    <p id="normalValue"></p>
+            <section id="resistanceSection">
+                <div id="resistanceTitle">
+                    <h2>RÉSISTANCES</h2>
                 </div>
-                <div id="plante">
-                    <img src="assets/icones/types/plante.png" alt="">
-                    <p id="planteValue"></p>
+                <div id="resistanceLogo">
+                    <div id="normal">
+                        <img src="../assets/icones/types/normal.png" alt="">
+                        <p id="normalValue"></p>
+                    </div>
+                    <div id="plante">
+                        <img src="../assets/icones/types/plante.png" alt="">
+                        <p id="planteValue"></p>
+                    </div>
+                    <div id="feu">
+                        <img src="../assets/icones/types/feu.png" alt="">
+                        <p id="feuValue"></p>
+                    </div>
+                    <div id="eau">
+                        <img src="../assets/icones/types/eau.png" alt="">
+                        <p id="eauValue"></p>
+                    </div>
+                    <div id="electrique">
+                        <img src="../assets/icones/types/electrique.png" alt="">
+                        <p id="electriqueValue"></p>
+                    </div>
+                    <div id="glace">
+                        <img src="../assets/icones/types/glace.png" alt="">
+                        <p id="glaceValue"></p>
+                    </div>
+                    <div id="combat">
+                        <img src="../assets/icones/types/combat.png" alt="">
+                        <p id="combatValue"></p>
+                    </div>
+                    <div id="poison">
+                        <img src="../assets/icones/types/poison.png" alt="">
+                        <p id="poisonValue"></p>
+                    </div>
+                    <div id="sol">
+                        <img src="../assets/icones/types/sol.png" alt="">
+                        <p id="solValue"></p>
+                    </div>
                 </div>
-                <div id="feu">
-                    <img src="assets/icones/types/feu.png" alt="">
-                    <p id="feuValue"></p>
+                <div id="resistanceLogo">
+                    <div id="vol">
+                        <img src="../assets/icones/types/vol.png" alt="">
+                        <p id="volValue"></p>
+                    </div>
+                    <div id="psy">
+                        <img src="../assets/icones/types/psy.png" alt="">
+                        <p id="psyValue"></p>
+                    </div>
+                    <div id="insecte">
+                        <img src="../assets/icones/types/insecte.png" alt="">
+                        <p id="insecteValue"></p>
+                    </div>
+                    <div id="roche">
+                        <img src="../assets/icones/types/roche.png" alt="">
+                        <p id="rocheValue"></p>
+                    </div>
+                    <div id="spectre">
+                        <img src="../assets/icones/types/spectre.png" alt="">
+                        <p id="spectreValue"></p>
+                    </div>
+                    <div id="dragon">
+                        <img src="../assets/icones/types/dragon.png" alt="">
+                        <p id="dragonValue"></p>
+                    </div>
+                    <div id="tenebre">
+                        <img src="../assets/icones/types/tenebre.png" alt="">
+                        <p id="tenebreValue"></p>
+                    </div>
+                    <div id="acier">
+                        <img src="../assets/icones/types/acier.png" alt="">
+                        <p id="acierValue"></p>
+                    </div>
+                    <div id="fee">
+                        <img src="../assets/icones/types/fee.png" alt="">
+                        <p id="feeValue"></p>
+                    </div>
                 </div>
-                <div id="eau">
-                    <img src="assets/icones/types/eau.png" alt="">
-                    <p id="eauValue"></p>
+                <div id="resistanceTuto">
+                    <p>X1 Inefficacité</p>
+                    <p>X0.5 Résistance</p>
+                    <p>X0.25 Double résistance</p>
+                    <p>X2 Faiblesse</p>
+                    <p>X4 Double faiblesse</p>
                 </div>
-                <div id="electrique">
-                    <img src="assets/icones/types/electrique.png" alt="">
-                    <p id="electriqueValue"></p>
+            </section>
+            <section id="evolveSection">
+                <h2 id="evolveTitle">Evolutions</h2>
+                <div id="evolveInfo">
+                    <div id="evolveName">
+                        <p id="evolveNameText"></p>
+                        <p id="evolveNameId"></p>
+                    </div>
+                    <div id="evolveCondition">
+                        <p id="evolveConditionText"></p>
+                    </div>
                 </div>
-                <div id="glace">
-                    <img src="assets/icones/types/glace.png" alt="">
-                    <p id="glaceValue"></p>
-                </div>
-                <div id="combat">
-                    <img src="assets/icones/types/combat.png" alt="">
-                    <p id="combatValue"></p>
-                </div>
-                <div id="poison">
-                    <img src="assets/icones/types/poison.png" alt="">
-                    <p id="poisonValue"></p>
-                </div>
-                <div id="sol">
-                    <img src="assets/icones/types/sol.png" alt="">
-                    <p id="solValue"></p>
-                </div>
-            </div>
-            <div id="resistanceLogo">
-                <div id="vol">
-                    <img src="assets/icones/types/vol.png" alt="">
-                    <p id="volValue"></p>
-                </div>
-                <div id="psy">
-                    <img src="assets/icones/types/psy.png" alt="">
-                    <p id="psyValue"></p>
-                </div>
-                <div id="insecte">
-                    <img src="assets/icones/types/insecte.png" alt="">
-                    <p id="insecteValue"></p>
-                </div>
-                <div id="roche">
-                    <img src="assets/icones/types/roche.png" alt="">
-                    <p id="rocheValue"></p>
-                </div>
-                <div id="spectre">
-                    <img src="assets/icones/types/spectre.png" alt="">
-                    <p id="spectreValue"></p>
-                </div>
-                <div id="dragon">
-                    <img src="assets/icones/types/dragon.png" alt="">
-                    <p id="dragonValue"></p>
-                </div>
-                <div id="tenebre">
-                    <img src="assets/icones/types/tenebre.png" alt="">
-                    <p id="tenebreValue"></p>
-                </div>
-                <div id="acier">
-                    <img src="assets/icones/types/acier.png" alt="">
-                    <p id="acierValue"></p>
-                </div>
-                <div id="fee">
-                    <img src="assets/icones/types/fee.png" alt="">
-                    <p id="feeValue"></p>
-                </div>
-            </div>
-            <div id="resistanceTuto">
-                <p>X1 Inefficacité</p>
-                <p>X0.5 Résistance</p>
-                <p>X0.25 Double résistance</p>
-                <p>X2 Faiblesse</p>
-                <p>X4 Double faiblesse</p>
-            </div>
-        </section>
-        <section id="evolveSection">
-            <h2 id="evolveTitle">Evolutions</h2>
-            <div id="evolveInfo">
-                <div id="evolveName">
-                    <p id="evolveNameText"></p>
-                    <p id="evolveNameId"></p>
-                </div>
-                <div id="evolveCondition">
-                    <p id="evolveConditionText"></p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
     </footer>
     </div>
-
 </body>
 
 </html>

@@ -3,6 +3,8 @@ import { showLoader, hideLoader } from "./loader.js";
 
 let randomButton = document.getElementById("pokeball");
 
+
+
 changePokemon(() => {
     hideLoader();
 });
