@@ -1,3 +1,5 @@
+// const inputRecherche = document.getElementById("recherche");
+
 let pokemonApi = "https://tyradex.vercel.app/api/v1/pokemon/";
 let currentPokemonData;
 export default async function fetchPokemon() {
@@ -9,3 +11,10 @@ export default async function fetchPokemon() {
     currentPokemonData = data.pokedexId;
     return data;
   }
+
+// export async function fetchPokemonByName() {
+//     let api = `${pokemonApi}${inputRecherche.value}`;
+//     let response = await fetch(api);
+//     let data = await response.json();
+//     return data;
+//   }
