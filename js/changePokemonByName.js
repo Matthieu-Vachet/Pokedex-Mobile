@@ -5,8 +5,7 @@ import typesBackground from "./typeBackground.js";
 const searchParams = new URLSearchParams(window.location.search);
 const searchValue = searchParams.get("name");
 
-
-async function renderPokemonByName() {
+async function renderPokemonByName(callback) {
     const data = await fetchPokemonByName(searchValue);
     if (data.types && data.types.length > 0) {
       const firstType = data.types[0].name;

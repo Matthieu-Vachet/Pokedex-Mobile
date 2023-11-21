@@ -18,6 +18,6 @@ export default async function changePokemon(callback) {
 
     // Appeler le callback si celui-ci est défini
     if (callback && typeof callback === 'function') {
-        callback();
+        setTimeout(callback, 5000);
     }
 }

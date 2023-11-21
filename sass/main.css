@@ -28,6 +28,7 @@ body {
   background-image: url("../../assets/background/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: linear-gradient(90deg, #B7BFCE 5.21%, #437EE7 100%);
 }
 
 html,
@@ -960,6 +961,7 @@ header #visualSection #shinyType else #typePokemon1 {
   margin-bottom: 15px;
   transition: transform 0.5s ease;
   box-shadow: 0px 5px 5px rgba(255, 136, 0, 0.285);
+  margin-top: 35px;
 }
 #button_random:hover {
   transform: scale(1.1);
@@ -990,71 +992,13 @@ header #visualSection #shinyType else #typePokemon1 {
   transform: scale(1.1);
 }
 
-#loader_container {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.352);
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  z-index: 99;
-}
-#loader_container #loader {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: white;
-  position: relative;
-  box-shadow: -20px 0 rgba(0, 0, 0, 0.1) inset;
-  animation: roll 1s ease-in-out infinite;
-  background: linear-gradient(to bottom, #e83e35 0%, #e83e35 50.5%, #ffffff 50.51%, #ffffff 100%);
-}
-#loader_container #loader:after {
-  content: "";
-  position: absolute;
-  top: 97px;
-  left: 0;
-  width: 200px;
-  height: 6px;
-  background: #3f3f3f;
-}
-#loader_container #loader:before {
-  content: "";
-  position: absolute;
-  top: 67px;
-  left: 67px;
-  width: 54px;
-  height: 54px;
-  border: solid 6px #3f3f3f;
-  border-radius: 50%;
-  background: white;
-  z-index: 3;
-  box-shadow: 0 0 15px -2px #c62828 inset;
-  animation: button 10s ease infinite;
-}
-@keyframes roll {
-  from {
-    transform: rotate(0);
-  }
-  90%, to {
-    transform: rotate(720deg);
-  }
-}
-@keyframes button {
-  from, 50%, to {
-    box-shadow: 0 0 15px -2px #c62828 inset;
-  }
-  25%, 75% {
-    box-shadow: 0 0 10px -2px #1300ea inset;
-  }
-}
 #body_container {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 #body_container header #header_section {
   position: relative;
@@ -1081,7 +1025,7 @@ header #visualSection #shinyType else #typePokemon1 {
 }
 #body_container main #button-home {
   position: relative;
-  padding-top: 300px;
+  padding-top: 280px;
 }
 #body_container main #button-home #label_recherche {
   position: relative;
@@ -1145,10 +1089,56 @@ header #visualSection #shinyType else #typePokemon1 {
 }
 #body_container main #button-home #search_icon {
   position: absolute;
-  top: 460px;
+  top: 315px;
   left: 270px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 #body_container main #button-home #search_icon:hover {
   transform: scale(1.1);
+}
+
+body #erreur_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body #erreur_container #erreur_title {
+  position: relative;
+  width: 90%;
+  font-size: 60px;
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+  text-transform: uppercase;
+  margin-top: 10%;
+  margin-bottom: 85%;
+}
+body #erreur_container #erreur_text {
+  position: relative;
+  width: 90%;
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+  line-height: 25px;
+}
+body #erreur_container #erreur_link {
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide";
+  margin-top: 20%;
+  text-decoration: none;
+  cursor: pointer;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #ff8000;
 }/*# sourceMappingURL=main.css.map */
